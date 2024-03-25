@@ -20,14 +20,18 @@ public class PlayerClass : ScriptableObject
     public int baseMana;
     public float baseManaRegen;
     public float baseSpeed;
+    public float baseEvasion;
 
     [Header("Stats per level")]
     public int healthPerLevel;
-    public int armorPerLevel;
-    public int magicResistPerLevel;
+    public float armorPerLevel;
+    public float magicResistPerLevel;
     public float attackPerLevel;
     public float magicPerLevel;
     public int manaPerLevel;
     public float manaRegenPerLevel;
 
+    [Header("Abilities")]
+    public Ability[] skillLibrary;
+    public Ability[] spellLibrary;
 }

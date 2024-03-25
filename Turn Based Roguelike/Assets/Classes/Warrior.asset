@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01d7c5a76d8c44885474702e0bd5a8, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  className: 
+  names: []
+  baseHealth: 40
+  baseArmor: 20
+  baseMagicResist: 15
+  baseAttack: 13
+  baseCritChance: 0.1
+  baseMagic: 5
+  baseMana: 50
+  baseManaRegen: 5
+  baseSpeed: 3
+  baseEvasion: 0
+  healthPerLevel: 8
+  armorPerLevel: 2
+  magicResistPerLevel: 1.8
+  attackPerLevel: 2.5
+  magicPerLevel: 0.5
+  manaPerLevel: 5
+  manaRegenPerLevel: 0.5
+  skillLibrary:
+  - {fileID: 11400000, guid: 9a081cfdf125182489f687e6e271be9b, type: 2}
+  - {fileID: 11400000, guid: d13bf79e65240b84eab5ef8882a8ebf4, type: 2}
+  - {fileID: 11400000, guid: 435f8823958bf1e4486b479c707ee670, type: 2}
+  - {fileID: 11400000, guid: d46545e489083e942ba8e7e4fd4529aa, type: 2}
+  - {fileID: 11400000, guid: 9b2a1cceb735c9a4482cf8853061496c, type: 2}
+  - {fileID: 11400000, guid: 3c855dde5bd34d947a54b3116356b188, type: 2}
+  spellLibrary:
+  - {fileID: 11400000, guid: 429af803d4253ab45824d7cc9b8af5a2, type: 2}
+  - {fileID: 11400000, guid: d61c4b75690343c4bafc3b4082713256, type: 2}
+  - {fileID: 11400000, guid: 34456ed0e5a2ab9488d270b8b1c7a9b7, type: 2}
+  - {fileID: 11400000, guid: 45a10dbb90d5d29468e272d562131f2b, type: 2}
+  - {fileID: 11400000, guid: 8be42e6ec9af9ff4e98ba7d0ad08e808, type: 2}
