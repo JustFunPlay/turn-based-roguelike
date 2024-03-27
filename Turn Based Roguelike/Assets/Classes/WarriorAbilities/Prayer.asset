@@ -22,7 +22,7 @@ MonoBehaviour:
     conditional:
       type: 0
       value: 0
-    damageModifier: 100
+    damageModifier: 1
     isHealing: 1
     critModifier: 0
     accuracy: 0

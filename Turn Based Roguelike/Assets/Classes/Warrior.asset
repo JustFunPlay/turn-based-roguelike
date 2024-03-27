@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff01d7c5a76d8c44885474702e0bd5a8, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: 
-  className: 
-  names: []
+  className: Warrior
+  names:
+  - steven
+  - harold
+  - jonathan
+  - mike
+  - carl
   baseHealth: 40
   baseArmor: 20
   baseMagicResist: 15
@@ -44,3 +49,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 34456ed0e5a2ab9488d270b8b1c7a9b7, type: 2}
   - {fileID: 11400000, guid: 45a10dbb90d5d29468e272d562131f2b, type: 2}
   - {fileID: 11400000, guid: 8be42e6ec9af9ff4e98ba7d0ad08e808, type: 2}
+  onCritEffect:
+  - affectsSelf: 1
+    statVar: 1
+    ammount: 0.5
+    duration: 0

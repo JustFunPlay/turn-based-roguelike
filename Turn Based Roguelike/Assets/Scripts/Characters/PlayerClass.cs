@@ -34,4 +34,5 @@ public class PlayerClass : ScriptableObject
     [Header("Abilities")]
     public Ability[] skillLibrary;
     public Ability[] spellLibrary;
+    public EffectTrigger[] onCritEffect;
 }

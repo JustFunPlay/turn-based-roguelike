@@ -59,7 +59,9 @@ public class EffectTrigger
 public enum StatVar
 {
     MaxHealth,
-    Health,
+    MagicHealing,
+    AttackHealing,
+    HealthHealing,
     Armor,
     MagicResist,
     Attack,
@@ -76,8 +78,12 @@ public enum StatVar
     Reflect,
     Stun,
     Cleanse,
-    DOT,
-    HOT,
+    MagicDOT,
+    PhysicalDOT,
+    HealthDOT,
+    MagicHOT,
+    AttackHOT,
+    HealthHOT,
     LifeSteal,
     ArmorPierce,
     MagicPierce
