@@ -14,7 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: 
   abilityDescription: 
-  abilityType: 0
+  abilityType: 1
   resourceCost: 0
   targetSelection: 0
-  effects: []
+  effects:
+  - target: 0
+    conditional:
+      type: 0
+      value: 0
+    damageModifier: 0
+    isHealing: 1
+    critModifier: 0
+    accuracy: 0
+    lifeSteal: 0
+    pierce: 0
+    onHitEffects:
+    - affectsSelf: 0
+      statVar: 0
+      ammount: 0
+      duration: 0
+    onCritEffects: []
+    onKillEffects: []

@@ -30,11 +30,11 @@ MonoBehaviour:
     pierce: 0
     onHitEffects:
     - affectsSelf: 1
-      statVar: 5
+      statVar: 7
       ammount: 0.1
       duration: 3
     - affectsSelf: 1
-      statVar: 4
+      statVar: 6
       ammount: 0.05
       duration: 3
     onCritEffects: []

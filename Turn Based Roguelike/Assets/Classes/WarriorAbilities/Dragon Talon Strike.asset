@@ -31,7 +31,7 @@ MonoBehaviour:
     onHitEffects: []
     onCritEffects:
     - affectsSelf: 1
-      statVar: 12
+      statVar: 14
       ammount: 1
       duration: 0
     onKillEffects: []

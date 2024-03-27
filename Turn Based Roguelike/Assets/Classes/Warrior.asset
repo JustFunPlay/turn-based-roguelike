@@ -37,12 +37,7 @@ MonoBehaviour:
   manaPerLevel: 5
   manaRegenPerLevel: 0.5
   skillLibrary:
-  - {fileID: 11400000, guid: 9a081cfdf125182489f687e6e271be9b, type: 2}
-  - {fileID: 11400000, guid: d13bf79e65240b84eab5ef8882a8ebf4, type: 2}
-  - {fileID: 11400000, guid: 435f8823958bf1e4486b479c707ee670, type: 2}
-  - {fileID: 11400000, guid: d46545e489083e942ba8e7e4fd4529aa, type: 2}
-  - {fileID: 11400000, guid: 9b2a1cceb735c9a4482cf8853061496c, type: 2}
-  - {fileID: 11400000, guid: 3c855dde5bd34d947a54b3116356b188, type: 2}
+  - {fileID: 11400000, guid: b6d580290ebd2f64f8ab9a6304c4edc1, type: 2}
   spellLibrary:
   - {fileID: 11400000, guid: 429af803d4253ab45824d7cc9b8af5a2, type: 2}
   - {fileID: 11400000, guid: d61c4b75690343c4bafc3b4082713256, type: 2}
@@ -51,6 +46,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8be42e6ec9af9ff4e98ba7d0ad08e808, type: 2}
   onCritEffect:
   - affectsSelf: 1
-    statVar: 1
-    ammount: 0.5
+    statVar: 3
+    ammount: 0.15
     duration: 0
