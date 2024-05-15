@@ -49,14 +49,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Ambient: 1.26
+    - _Ambient: 0.75
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimLightBrightness: 2.72
-    - _RimPower: 5.94
-    - _ToonRampOffset: 0.63
-    - _ToonRampOffsetPoint: 1.02
-    - _ToonRampSmoothness: 0.32
+    - _RimLightBrightness: 0.67
+    - _RimPower: 5
+    - _ToonRampOffset: 0.4
+    - _ToonRampOffsetPoint: 0.62
+    - _ToonRampSmoothness: 0.36
     m_Colors:
     - _ToonRampTinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

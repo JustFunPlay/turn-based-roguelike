@@ -7,9 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AdditiveFire
-  m_Shader: {fileID: -6465566751694194690, guid: 1642c0469d8fa624f94af76b156cb86b,
-    type: 3}
+  m_Name: Fresnelmaterial
+  m_Shader: {fileID: -6465566751694194690, guid: ffb3ba26f3f029648a30f565be74b43f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,10 +23,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Mask:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,14 +37,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistortionStrength: 0.15
+    - _FresnelPower: 3.13
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScrollSpeed: 0.5
-    - _TwirlStrength: 5.5
-    m_Colors: []
+    m_Colors:
+    - _FresnelColor: {r: 75.37317, g: 0, b: 135.58704, a: 1}
+    - _InnerFresnelColor: {r: 0.0000009282887, g: 0.0000009282887, b: 0.0000009282887, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7795782414640339553
+--- !u!114 &6422565994090855964
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

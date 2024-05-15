@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 2e94699c3f1d2c043942f9692e812e73, type: 3}
+        m_Texture: {fileID: 2800000, guid: e3126ee6c063bf74d87d72a0ffd37311, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TerrainColor:
@@ -76,14 +76,14 @@ Material:
     - _TerrainSize: 1000
     - _USETERRAINCOLOR: 0
     - _WindHeight: 0.5
-    - _WindIntesity: 1
+    - _WindIntesity: 0.2
     - _WindNoiseSpeed: 1
     - _WindSpeed: 0.5
     m_Colors:
-    - _BottomColor: {r: 0.7683901, g: 0.854902, b: 0, a: 0}
-    - _FarColor: {r: 0.09760109, g: 0.572327, b: 0.0125983, a: 0}
+    - _BottomColor: {r: 0.29746068, g: 0.67295593, b: 0, a: 0}
+    - _FarColor: {r: 0.06773094, g: 0.44025147, b: 0, a: 0}
     - _NearFarRange: {r: 10, g: 25, b: 0, a: 0}
-    - _Nearcolor: {r: 0.6368797, g: 1, b: 0, a: 0}
+    - _Nearcolor: {r: 0.18673082, g: 0.7106918, b: 0, a: 0}
     - _ShadowColor: {r: 0.003955513, g: 0.09189193, b: 0.2515723, a: 0}
     - _WindNoiseContrast: {r: 0, g: 1, b: 0, a: 0}
     - _WindNoiseScale: {r: 10, g: 20, b: 0, a: 0}
