@@ -68,7 +68,7 @@ Material:
     m_Floats:
     - _AlphaThreshold: 1
     - _GrassPower: 1
-    - _HeightBlend: 1
+    - _HeightBlend: 6.8
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
@@ -80,10 +80,10 @@ Material:
     - _WindNoiseSpeed: 1
     - _WindSpeed: 0.5
     m_Colors:
-    - _BottomColor: {r: 0.29746068, g: 0.67295593, b: 0, a: 0}
-    - _FarColor: {r: 0.06773094, g: 0.44025147, b: 0, a: 0}
+    - _BottomColor: {r: 0.016350975, g: 0.52201253, b: 0, a: 0}
+    - _FarColor: {r: 0.10534589, g: 0.42138356, b: 0, a: 0}
     - _NearFarRange: {r: 10, g: 25, b: 0, a: 0}
-    - _Nearcolor: {r: 0.18673082, g: 0.7106918, b: 0, a: 0}
+    - _Nearcolor: {r: 0.24517874, g: 0.9245283, b: 0, a: 0}
     - _ShadowColor: {r: 0.003955513, g: 0.09189193, b: 0.2515723, a: 0}
     - _WindNoiseContrast: {r: 0, g: 1, b: 0, a: 0}
     - _WindNoiseScale: {r: 10, g: 20, b: 0, a: 0}
