@@ -49,11 +49,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Ambient: 0.76
+    - _Ambient: 0.91
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimLightBrightness: 0.67
-    - _RimPower: 5
+    - _RimLightBrightness: 28.1
+    - _RimPower: 4.24
     - _ToonRampOffset: 0.4
     - _ToonRampOffsetPoint: 0.62
     - _ToonRampSmoothness: 0.36
