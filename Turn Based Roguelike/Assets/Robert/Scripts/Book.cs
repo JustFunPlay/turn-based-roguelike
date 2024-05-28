@@ -12,11 +12,11 @@ public class Book : MonoBehaviour
     {
         mainButtons.SetActive(false);
         catalog.SetActive(true);
-        animator.SetInteger("BookPar", 1);
+        animator.SetInteger("Book", 1);
     }
     public void ExitBook()
     {
         bestiaryTab.SetActive(false);
-        animator.SetInteger("BookPar", 2);
+        animator.SetInteger("Book", 4);
     }
 }
