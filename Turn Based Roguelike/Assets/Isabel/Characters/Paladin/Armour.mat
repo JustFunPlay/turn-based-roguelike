@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Armour
-  m_Shader: {fileID: -6465566751694194690, guid: 1f9c4f061540b8b43836555b2a615181, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 6c7fad51efa266e48bb46f1e3e4909ae, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Mask_R_Emission:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ff390071e646eca458908688eca0c647, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
@@ -61,9 +61,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Brightness_Rim: 2.85
-    - Rim_Power: 0
-    - Toon_Ramp_Offset: 0
+    - Brightness_Rim: 3.95
+    - Rim_Power: 0.49
+    - Toon_Ramp_Offset: 0.701
     - Toon_Ramp_Smoothness: 0
     - _Ambient: 0.75
     - _QueueControl: 0
@@ -74,8 +74,8 @@ Material:
     - _ToonRampOffsetPoint: 0.62
     - _ToonRampSmoothness: 0.36
     m_Colors:
-    - Toon_Ramp_Tint: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - Toon_Ramp_Tint: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.7735849, g: 0.7633677, b: 0.7633677, a: 1}
     - _ToonRampTinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7607868703924571531
