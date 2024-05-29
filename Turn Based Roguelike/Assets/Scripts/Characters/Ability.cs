@@ -19,14 +19,7 @@ public enum AbilityType
     Skill,
     Spell
 }
-public enum Targeting
-{
-    Self,
-    Ally,
-    AllyTeam,
-    Enemy,
-    EnemyTeam
-}
+
 [System.Serializable]
 public class AbilityEffect
 {

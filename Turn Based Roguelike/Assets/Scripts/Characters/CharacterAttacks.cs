@@ -30,11 +30,11 @@ public class CharacterAttacks : CharacterStats
         Ability activatedSkill = learnedSkills[skillIndex];
         Debug.Log($"{characterName} uses the skill {activatedSkill.abilityName} at {target.GetName}");
         skillPoints -= activatedSkill.resourceCost;
-        List<CharacterStats> targetParty;
-        if (activatedSkill.targetSelection == Targeting.Enemy || activatedSkill.targetSelection == Targeting.EnemyTeam)
-            targetParty = CombatManager.GetOpposingParty(this);
-        else
-            targetParty = CombatManager.GetOwnParty(this);
+        List<CharacterStats> targetParty = new List<CharacterStats>();
+        //if (activatedSkill.targetSelection == Targeting.Enemy || activatedSkill.targetSelection == Targeting.EnemyTeam)
+        //    targetParty = CombatManager.GetOpposingParty(this);
+        //else
+        //    targetParty = CombatManager.GetOwnParty(this);
         foreach (AbilityEffect effect in activatedSkill.effects)
         {
             yield return new WaitForSeconds(0.25f);
@@ -101,7 +101,7 @@ public class CharacterAttacks : CharacterStats
                     }
                     break;
                 case EffectTarget.RandomTarget:
-                    int rTarget = Random.Range(0, targetParty.Count);
+                    int rTarget = 0; // Random.Range(0, targetParty.Count);
                     if ((effect.conditional.type == ConditionalType.TargetMissingHealth && effect.conditional.value > 1 - targetParty[rTarget].GetCurrentHealthPercentage) || (effect.conditional.type == ConditionalType.TargetCurrentHealth && effect.conditional.value > targetParty[rTarget].GetCurrentHealthPercentage) || (effect.conditional.type == ConditionalType.TargetIsStunned && targetParty[rTarget].IsStunned))
                         continue;
                     conditionalModdifier = 1;
@@ -245,11 +245,11 @@ public class CharacterAttacks : CharacterStats
         Ability activatedSpell = learnedSpells[spellIndex];
         Debug.Log($"{characterName} casts the spell {activatedSpell.abilityName} at {target.GetName}");
         currentMana -= activatedSpell.resourceCost;
-        List<CharacterStats> targetParty;
-        if (activatedSpell.targetSelection == Targeting.Enemy || activatedSpell.targetSelection == Targeting.EnemyTeam)
-            targetParty = CombatManager.GetOpposingParty(this);
-        else
-            targetParty = CombatManager.GetOwnParty(this);
+        List<CharacterStats> targetParty = new List<CharacterStats>();
+        //if (activatedSpell.targetSelection == Targeting.Enemy || activatedSpell.targetSelection == Targeting.EnemyTeam)
+        //    targetParty = CombatManager.GetOpposingParty(this);
+        //else
+        //    targetParty = CombatManager.GetOwnParty(this);
         foreach (AbilityEffect effect in activatedSpell.effects)
         {
             yield return new WaitForSeconds(0.25f);

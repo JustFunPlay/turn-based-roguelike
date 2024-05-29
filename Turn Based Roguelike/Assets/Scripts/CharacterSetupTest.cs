@@ -14,7 +14,7 @@ public class CharacterSetupTest : MonoBehaviour
     private void Start()
     {
         dummy.SetUpCharacter(dummyClass, 100);
-        CombatManager.enemyWave.Add(dummy);
+        //CombatManager.enemyWave.Add(dummy);
     }
 
     public void GoLevelUp()
@@ -24,21 +24,21 @@ public class CharacterSetupTest : MonoBehaviour
     public void Initialize()
     {
         character.SetUpCharacter(playerClass, levelToSet);
-        if (!CombatManager.playerParty.Contains(character))
-            CombatManager.playerParty.Add(character);
+        //if (!CombatManager.playerParty.Contains(character))
+        //    CombatManager.playerParty.Add(character);
     }
 
     public void UseBasicAttack()
     {
-        character.UseBasicAttack(CombatManager.GetOpposingParty(character)[0]);
+        //character.UseBasicAttack(CombatManager.GetOpposingParty(character)[0]);
     }
     public void CastRandomSkill()
     {
-        StartCoroutine(character.ActivateSkill(Random.Range(0, character.LearnedSkills), CombatManager.GetOpposingParty(character)[0]));
+        //StartCoroutine(character.ActivateSkill(Random.Range(0, character.LearnedSkills), CombatManager.GetOpposingParty(character)[0]));
     }
     public void CastRandomSpell()
     {
-        StartCoroutine(character.ActivateSpell(Random.Range(0, character.LearnedSpells), CombatManager.GetOpposingParty(character)[0]));
+        //StartCoroutine(character.ActivateSpell(Random.Range(0, character.LearnedSpells), CombatManager.GetOpposingParty(character)[0]));
 
     }
 }

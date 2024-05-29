@@ -278,7 +278,7 @@ public class CharacterStats : MonoBehaviour
     }
     protected virtual void OnDeath()
     {
-        CombatManager.RemoveFromCombat(this);
+        //CombatManager.RemoveFromCombat(this);
         //play death animation
     }
     public void ReceiveHealing(float healingRecieved, out float healingDone)
@@ -422,7 +422,7 @@ public class CharacterStats : MonoBehaviour
             }
         }
         RecalculateStats();
-        CombatManager.ReadyNextCharacter();
+        //CombatManager.ReadyNextCharacter();
     }
 }
 
