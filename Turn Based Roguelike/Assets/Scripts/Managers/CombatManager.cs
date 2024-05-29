@@ -14,7 +14,7 @@ public class CombatManager : MonoBehaviour
 
     //target selection stuff
     private Targeting currentTargetingType;
-    private CombatPositionData targetingSource;
+    [SerializeField] private CombatPositionData targetingSource;
     private Action<CombatPositionData, CombatPositionData[]> startAbilityAction;
     private List<CombatPositionData> currentSelectedTargets = new List<CombatPositionData>();
 
@@ -29,13 +29,25 @@ public class CombatManager : MonoBehaviour
     {
         instance = this;
 
-        for (int i = 1; i < playerParty.Length; i++)
+        for (int i = 0; i < playerParty.Length; i++)
         {
             playerParty[i].targetingBox.positionData = playerParty[i];
+            playerParty[i].targetingBox.ToggleHighlight(false);
+
+            if (playerParty[i].character != null)
+            {
+                playerParty[i].character.InitializeCharacter(playerParty[i].character.characterData);
+            }
         }
-        for (int i = 1; i < enemyTeam.Length; i++)
+        for (int i = 0; i < enemyTeam.Length; i++)
         {
             enemyTeam[i].targetingBox.positionData = enemyTeam[i];
+            enemyTeam[i].targetingBox.ToggleHighlight(false);
+            
+            if (enemyTeam[i].character != null)
+            {
+                enemyTeam[i].character.InitializeCharacter(enemyTeam[i].character.characterData);
+            }
         }
     }
 
@@ -132,11 +144,15 @@ public class CombatManager : MonoBehaviour
 
         if (isPlayer)
         {
-            confirmTarget.performed += ConfirmTarget;
+            Debug.Log("Ability used by player");
+            confirmTarget.started += ConfirmTarget;
+            confirmTarget.Enable();
             if (currentTargetingType == Targeting.Enemy || currentTargetingType == Targeting.Ally)
             {
-                moveTargetLeft.performed += MoveTargetLeft;
-                moveTargetRight.performed += MoveTargetRight;
+                moveTargetLeft.started += MoveTargetLeft;
+                moveTargetLeft.Enable();
+                moveTargetRight.started += MoveTargetRight;
+                moveTargetRight.Enable();
             }
         }
         else
@@ -172,13 +188,13 @@ public class CombatManager : MonoBehaviour
             currentSelectedTargets[i].targetingBox.ToggleHighlight(false);
         }
 
-        targetingSource = null;
+        //targetingSource = null;
         currentTargetingType = Targeting.Self;
         startAbilityAction = null;
         currentSelectedTargets.Clear();
-        confirmTarget.performed -= ConfirmTarget;
-        moveTargetLeft.performed -= MoveTargetLeft;
-        moveTargetRight.performed -= MoveTargetRight;
+        confirmTarget.started -= ConfirmTarget;
+        moveTargetLeft.started -= MoveTargetLeft;
+        moveTargetRight.started -= MoveTargetRight;
     }
 
     private void ConfirmTarget(InputAction.CallbackContext callbackContext) { ConfirmTargetSelection(); }
@@ -273,6 +289,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 }
+[Serializable]
 
 public class CombatPositionData
 {

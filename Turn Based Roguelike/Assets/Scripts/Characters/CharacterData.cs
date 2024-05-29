@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New character data", menuName = "ScriptableObjects/Characters/Player Character")]
 public class CharacterData : ScriptableObject
 {
     //public GameObject visualModel

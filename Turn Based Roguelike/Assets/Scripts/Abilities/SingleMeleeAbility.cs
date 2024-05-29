@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Standard melee attack", menuName = "ScriptableObjects/Abilities/Default Melee Attack")]
 public class SingleMeleeAbility : BaseAbility
 {
     [Header("AbilityDetails")]

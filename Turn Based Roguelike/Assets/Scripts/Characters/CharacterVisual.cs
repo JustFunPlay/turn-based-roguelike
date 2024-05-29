@@ -26,12 +26,19 @@ public class CharacterVisual : MonoBehaviour
 
     public void InitializeCharacter(CharacterData characterData)
     {
+        Level = 1;
         this.characterData = characterData;
+        CurrentHP = MaxHP = characterData.baseHealth + (Level - 1) * characterData.healthPerLevel;
+        Armor = characterData.baseArmor + (Level - 1) * characterData.armorPerLevel;
+        MagicResist = characterData.baseMagicResist + (Level - 1) * characterData.magicResistPerLevel;
+        Attack = characterData.baseAttack + (Level -1) * characterData.attackPerLevel;
+        CritRate = characterData.baseCritChance;
     }
 
     public void PlayAnimation(string animationName)
     {
-        animator.Play(animationName);
+        if (animator != null)
+            animator.Play(animationName);
     }
 
     public void OnCrit()
@@ -44,26 +51,32 @@ public class CharacterVisual : MonoBehaviour
 
     public void TakeDamage(float damageToDo, DamageType damageType, out float damageDealt)
     {
-        animator.Play("Hurt");
+        PlayAnimation("Hurt");
         switch (damageType)
         {
             case DamageType.Physical:
-                damageToDo *= 1 - Armor / (100 + Armor);
+                damageToDo *= 100 / (100 + Armor);
                 break;
             case DamageType.Magic:
-                damageToDo *= 1 - MagicResist / (100 + MagicResist);
+                damageToDo *= 100 / (100 + MagicResist);
                 break;
         }
         CurrentHP -= damageToDo;
         damageDealt = damageToDo;
+        Debug.Log($"{gameObject.name} took {damageDealt} {damageType}damage");
     }
     public bool CheckForDeath()
     {
         if (CurrentHP <= 0)
         {
             //do the die
+            Destroy(gameObject, 0.1f);
             return true;
         }
         return false;
+    }
+    public void UseAbility(int abilityIndex)
+    {
+        characterData.abilities[abilityIndex].GetTarget(this);
     }
 }
