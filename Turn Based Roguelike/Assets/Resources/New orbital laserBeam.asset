@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a806fa0939067d64894d8aea6176273e, type: 3}
+  m_Name: New orbital laserBeam
+  m_EditorClassIdentifier: 
+  abilityName: Judgement
+  resourceCost: 5
+  description: 
+  delayToInitialEffect: 1
+  delayToEnd: 3
+  targeting: 6
+  animationName: 
+  numberOfHits: 5
+  damageScalingPerHit: 0.5
+  delayBetweenHits: 0.25
+  bonusCritRate: 0
+  laserBeam: {fileID: 8379370648477062446, guid: 5afc93524d921f24a8bafe133f29f232, type: 3}

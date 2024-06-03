@@ -24,4 +24,4 @@ MonoBehaviour:
   targetMaxHealthScaling: 0
   targetMissingHealthScaling: 0
   bonusCritRate: 0
-  healParticle: {fileID: 0}
+  healParticle: {fileID: 5093039331659167404, guid: 19357a85bcc73404fb2c5881b6b13a8b, type: 3}
