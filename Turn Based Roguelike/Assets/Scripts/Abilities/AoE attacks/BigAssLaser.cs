@@ -15,8 +15,10 @@ public class BigAssLaser : BaseAbility
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
+        CameraManager.Instance.SetTargetPosition(caster);
         yield return new WaitForSeconds(delayToInitialEffect);
 
+        CameraManager.Instance.SetTeamView(validTargets[0]);
         Vector3 laserPosition = new Vector3();
         foreach (CombatPositionData positionData in validTargets)
         {

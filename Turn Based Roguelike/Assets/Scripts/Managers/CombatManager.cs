@@ -336,7 +336,7 @@ public class CombatManager : MonoBehaviour
             playerParty[i].Turnprogress -= timeToReduce;
         for (int i = 0; i < enemyTeam.Length; i++)
             enemyTeam[i].Turnprogress -= timeToReduce;
-
+        CameraManager.Instance.SetFocusPosition(nextToAct);
         nextToAct.character.StartTurn();
     }
 

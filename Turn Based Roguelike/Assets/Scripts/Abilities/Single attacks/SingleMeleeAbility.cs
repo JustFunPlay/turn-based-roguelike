@@ -12,7 +12,7 @@ public class SingleMeleeAbility : BaseAbility
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
         yield return new WaitForSeconds(delayToInitialEffect);
-
+        CameraManager.Instance.SetTargetPosition(validTargets[0]);
         float critroll = Random.Range(0f, 1f) + bonusCritRate + caster.character.CritRate;
         validTargets[0].character.TakeDamage(caster.character.Attack * damageScaling * (critroll >= 1 ? 2 : 1), DamageType.Physical,  out _);
         if (resourceCost == 0)
