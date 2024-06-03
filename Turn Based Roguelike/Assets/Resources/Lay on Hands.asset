@@ -15,8 +15,8 @@ MonoBehaviour:
   abilityName: Lay on hands
   resourceCost: 3
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1
+  delayToEnd: 1.5
   targeting: 1
   animationName: LayOnHands
   physicalHealingScaling: 0

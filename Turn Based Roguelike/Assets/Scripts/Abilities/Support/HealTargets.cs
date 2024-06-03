@@ -16,8 +16,13 @@ public class HealTargets : BaseAbility
     [SerializeField] private GameObject healParticle;
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
+        CameraManager.Instance.SetTargetPosition(caster);
         yield return new WaitForSeconds(delayToInitialEffect);
 
+        if (validTargets.Length > 1)
+            CameraManager.Instance.SetTeamView(validTargets[0]);
+        else
+            CameraManager.Instance.SetTargetPosition(validTargets[0]);
         float baseHealValue = magicHealingScaling * caster.character.Magic + physicalHealingScaling * caster.character.Attack;
         foreach (CombatPositionData target in validTargets)
         {

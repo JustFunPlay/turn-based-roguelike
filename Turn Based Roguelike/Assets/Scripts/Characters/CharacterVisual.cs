@@ -92,7 +92,7 @@ public class CharacterVisual : MonoBehaviour
     public void PlayAnimation(string animationName)
     {
         if (animator != null)
-            animator.Play(animationName);
+            animator.SetTrigger(animationName);
     }
 
     public void OnCrit()
@@ -102,7 +102,7 @@ public class CharacterVisual : MonoBehaviour
 
     public void TakeDamage(float damageToDo, DamageType damageType, out float damageDealt)
     {
-        PlayAnimation("Hurt");
+        PlayAnimation("TakeDamage");
         switch (damageType)
         {
             case DamageType.Physical:
@@ -120,8 +120,8 @@ public class CharacterVisual : MonoBehaviour
     {
         if (CurrentHP <= 0)
         {
-            //do the die
-            Destroy(gameObject, 0.1f);
+            PlayAnimation("Death");
+            Destroy(gameObject, 1);
             return true;
         }
         return false;
@@ -133,6 +133,7 @@ public class CharacterVisual : MonoBehaviour
     }
     public void UseAbility(int abilityIndex)
     {
-        characterData.abilities[abilityIndex].GetTarget(this);
+        if (characterData.abilities.Count > abilityIndex)
+            characterData.abilities[abilityIndex].GetTarget(this);
     }
 }

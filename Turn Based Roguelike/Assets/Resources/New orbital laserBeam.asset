@@ -15,10 +15,10 @@ MonoBehaviour:
   abilityName: Judgement
   resourceCost: 5
   description: 
-  delayToInitialEffect: 1
+  delayToInitialEffect: 2
   delayToEnd: 3
   targeting: 6
-  animationName: 
+  animationName: LaserBeam
   numberOfHits: 5
   damageScalingPerHit: 0.5
   delayBetweenHits: 0.25

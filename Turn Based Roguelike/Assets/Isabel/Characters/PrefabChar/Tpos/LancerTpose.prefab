@@ -427,6 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7742348551841218939}
+  - component: {fileID: 5408199177508302318}
   m_Layer: 0
   m_Name: LancerTpose
   m_TagString: Untagged
@@ -455,6 +456,21 @@ Transform:
   - {fileID: 1905960892281384146}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &5408199177508302318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6933722979254787009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 822fa84116843aa40b74ab273e747703, type: 2}
+  centreOfMassOffset: 1
+  animator: {fileID: 0}
 --- !u!1 &7217311677932864248
 GameObject:
   m_ObjectHideFlags: 0

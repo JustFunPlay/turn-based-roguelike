@@ -119,5 +119,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1502205112102444513}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5364846821833553550}
   m_SourcePrefab: {fileID: 100100000, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+--- !u!1 &2802615709548802904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+  m_PrefabInstance: {fileID: 3036989596225818121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1502205112102444513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802615709548802904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 4410e6d2beee40a499937753e3e94b83, type: 2}
+  centreOfMassOffset: 1.3
+  animator: {fileID: 5364846821833553550}
+--- !u!95 &5364846821833553550
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802615709548802904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 045a39bbc56b18942b0d2ecb6a110ac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

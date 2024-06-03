@@ -82,7 +82,7 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator MoveToNewFocusPoint(Transform newPoint)
     {
-        for (int t = 0; t <=0; t++)
+        for (int t = 0; t <= 10; t++)
         {
             cameraTransform.position = Vector3.Lerp(currentFocusPoint.position, newPoint.position, t * 0.1f);
             cameraTransform.rotation = Quaternion.Slerp(currentFocusPoint.rotation, newPoint.rotation, t * 0.1f);

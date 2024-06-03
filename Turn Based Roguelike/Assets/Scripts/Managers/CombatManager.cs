@@ -25,6 +25,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private InputAction moveTargetLeft;
     [SerializeField] private InputAction moveTargetRight;
 
+    public CharacterVisual currentlyActingCharacter { get; private set; }
     private void Start()
     {
         instance = this;
@@ -51,7 +52,7 @@ public class CombatManager : MonoBehaviour
                 enemyTeam[i].Turnprogress = 10000 / enemyTeam[i].character.Speed;
             }
         }
-        ReadyNextCharacter();
+        Invoke("ReadyNextCharacter", 0.1f);
     }
 
     private void MoveTargetLeft(InputAction.CallbackContext callbackContext)
@@ -156,14 +157,18 @@ public class CombatManager : MonoBehaviour
                 break;
             case Targeting.Self:
                 currentSelectedTargets.Add(targetingSource);
+                if (isPlayer) CameraManager.Instance.SetTargetPosition(targetingSource);
                 break;
             case Targeting.Ally:
                 currentSelectedTargets.Add(GetRandomTarget(targetingSource, targetingType));
+                if (isPlayer) CameraManager.Instance.SetTeamView(targetingSource);
                 break;
             case Targeting.AllyRandom:
+                if (isPlayer) CameraManager.Instance.SetTeamView(targetingSource);
                 SelectEntireParty(isPlayer);
                 break;
             case Targeting.AllyTeam:
+                if (isPlayer) CameraManager.Instance.SetTeamView(targetingSource);
                 SelectEntireParty(isPlayer);
                 break;
         }
@@ -337,6 +342,8 @@ public class CombatManager : MonoBehaviour
         for (int i = 0; i < enemyTeam.Length; i++)
             enemyTeam[i].Turnprogress -= timeToReduce;
         CameraManager.Instance.SetFocusPosition(nextToAct);
+
+        currentlyActingCharacter = nextToAct.character;
         nextToAct.character.StartTurn();
     }
 

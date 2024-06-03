@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f2a4c92186fb3742812429e7d358f84, type: 3}
-  m_Name: New Standard melee attack
+  m_Name: Basic attackj
   m_EditorClassIdentifier: 
   abilityName: Basic Attack
   resourceCost: 0
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1.5
+  delayToEnd: 1
   targeting: 4
-  animationName: 
+  animationName: Basic Attack
   damageScaling: 0.5
   bonusCritRate: 0
