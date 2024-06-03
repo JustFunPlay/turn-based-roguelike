@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterVisual : MonoBehaviour
@@ -33,6 +34,59 @@ public class CharacterVisual : MonoBehaviour
         MagicResist = characterData.baseMagicResist + (Level - 1) * characterData.magicResistPerLevel;
         Attack = characterData.baseAttack + (Level -1) * characterData.attackPerLevel;
         CritRate = characterData.baseCritChance;
+        if (MaxMana == 0)
+            SkillPoints = 5;
+        Speed = characterData.baseSpeed;
+    }
+
+    public void StartTurn()
+    {
+        Debug.Log($"{gameObject.name} starts their turn");
+        if (CombatManager.instance.enemyTeam.Contains(CombatManager.instance.GetOwnCombatPosition(this)))
+        {
+            UseRandomSkill();
+        }
+        else
+        {
+
+        }
+    }
+
+    protected virtual void UseRandomSkill()
+    {
+        if (characterData.abilities.Count > 0)
+        {
+            for (int i = 1; i < characterData.abilities.Count; i++)
+            {
+                if (CurrentMana >= characterData.abilities[i].resourceCost || SkillPoints > characterData.abilities[i].resourceCost)
+                {
+                    if (Random.Range(0, MaxMana > 0 ? MaxMana : 10) <= characterData.abilities[i].resourceCost)
+                    {
+                        characterData.abilities[i].GetTarget(this);
+
+                        if (MaxMana > 0)
+                            CurrentMana -= characterData.abilities[i].resourceCost;
+                        else
+                            SkillPoints -= characterData.abilities[i].resourceCost;
+
+                        return;
+                    }
+                }
+            }
+            characterData.abilities[0].GetTarget(this);
+
+        }
+        else
+        {
+            CombatManager.instance.PerformEndOfActionChecks();
+        }
+
+    }
+
+    public void AddSkillPoints(int ammount = 1)
+    {
+        if (MaxMana == 0)
+            SkillPoints = Mathf.Clamp(SkillPoints + ammount, 0, 10);
     }
 
     public void PlayAnimation(string animationName)
@@ -43,10 +97,7 @@ public class CharacterVisual : MonoBehaviour
 
     public void OnCrit()
     {
-        if (MaxMana == 0)
-        {
-            SkillPoints++;
-        }
+            AddSkillPoints();
     }
 
     public void TakeDamage(float damageToDo, DamageType damageType, out float damageDealt)
@@ -74,6 +125,11 @@ public class CharacterVisual : MonoBehaviour
             return true;
         }
         return false;
+    }
+    public void RestoreHealth(float healingToDo, out float healingDone)
+    {
+        healingDone = Mathf.Min(healingToDo, MaxHP - CurrentHP);
+        CurrentHP = Mathf.Clamp(CurrentHP + healingToDo, 0, MaxHP);
     }
     public void UseAbility(int abilityIndex)
     {

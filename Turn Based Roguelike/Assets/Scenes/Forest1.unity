@@ -1893,7 +1893,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1546829815}
+    m_TransformParent: {fileID: 1140308938}
     m_Modifications:
     - target: {fileID: 4385781415782664638, guid: 79e53c3bc736d254aad730870e77f42a, type: 3}
       propertyPath: m_Enabled
@@ -2671,11 +2671,11 @@ MonoBehaviour:
     Turnprogress: 0
     targetingBox: {fileID: 2046463543}
   enemyTeam:
-  - character: {fileID: 0}
+  - character: {fileID: 406985735}
     standingPosition: {fileID: 1140308938}
     Turnprogress: 0
     targetingBox: {fileID: 69718540}
-  - character: {fileID: 406985735}
+  - character: {fileID: 0}
     standingPosition: {fileID: 1546829815}
     Turnprogress: 0
     targetingBox: {fileID: 1637301057}
@@ -4627,6 +4627,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 69718542}
+  - {fileID: 406985733}
   m_Father: {fileID: 1868881212}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1151161498
@@ -6481,7 +6482,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1637301059}
-  - {fileID: 406985733}
   m_Father: {fileID: 1868881212}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1574842998

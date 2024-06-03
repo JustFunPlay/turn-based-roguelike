@@ -9,15 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f2a4c92186fb3742812429e7d358f84, type: 3}
-  m_Name: New Standard melee attack
+  m_Script: {fileID: 11500000, guid: dbe721691daa9524abcbd81f4eed28d6, type: 3}
+  m_Name: Lay on Hands
   m_EditorClassIdentifier: 
-  abilityName: Basic Attack
-  resourceCost: 0
+  abilityName: Lay on hands
+  resourceCost: 3
   description: 
   delayToInitialEffect: 0.5
   delayToEnd: 0.5
-  targeting: 4
-  animationName: 
-  damageScaling: 0.5
+  targeting: 1
+  animationName: LayOnHands
+  physicalHealingScaling: 0
+  magicHealingScaling: 1.5
+  targetMaxHealthScaling: 0
+  targetMissingHealthScaling: 0
   bonusCritRate: 0
+  healParticle: {fileID: 0}

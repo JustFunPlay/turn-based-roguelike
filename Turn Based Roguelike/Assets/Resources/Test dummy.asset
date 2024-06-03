@@ -15,12 +15,12 @@ MonoBehaviour:
   baseHealth: 50
   baseArmor: 10
   baseMagicResist: 10
-  baseAttack: 0
+  baseAttack: 5
   baseCritChance: 0
   baseMagic: 0
   baseResource: 0
   baseResourceRegen: 0
-  baseSpeed: 0
+  baseSpeed: 90
   baseEvasion: 0
   healthPerLevel: 10
   armorPerLevel: 3
@@ -29,4 +29,6 @@ MonoBehaviour:
   magicPerLevel: 0
   resourcePerLevel: 0
   resourceRegenPerLevel: 0
-  abilities: []
+  abilities:
+  - {fileID: 11400000, guid: 21dae374947e59248b6e4eae3c65ce0d, type: 2}
+  - {fileID: 11400000, guid: 5f29ceb718eab54418c702a77c1dc418, type: 2}

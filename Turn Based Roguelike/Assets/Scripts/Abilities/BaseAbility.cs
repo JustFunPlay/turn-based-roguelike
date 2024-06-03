@@ -7,6 +7,7 @@ public class BaseAbility : ScriptableObject
     public string abilityName;
     public int resourceCost;
     [Multiline] public string description;
+    [SerializeField] protected float delayToInitialEffect = 0.5f;
     [SerializeField] private float delayToEnd = 0.5f;
     [SerializeField] private Targeting targeting;
     [SerializeField] string animationName;
@@ -14,17 +15,20 @@ public class BaseAbility : ScriptableObject
     public void GetTarget(CharacterVisual caster)
     {
         CombatManager.instance.PrepareTargetSelection(caster, targeting, ActivateAbility);
+        Debug.Log($"{caster.gameObject.name} is getting target");
     }
 
     private void ActivateAbility(CombatPositionData caster, CombatPositionData[] validTargets)
     {
         GameManager.instance.StartCoroutine(TriggerAbilityEffects(caster, validTargets));
         caster.character.PlayAnimation(animationName);
+        Debug.Log($"{caster.character.gameObject.name} is using {abilityName}");
     }
 
     protected virtual IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
         yield return new WaitForSeconds(delayToEnd);
+        Debug.Log($"{caster.character.gameObject.name} has finished using {abilityName}");
         CombatManager.instance.PerformEndOfActionChecks();
     }
 }

@@ -37,6 +37,7 @@ public class CombatManager : MonoBehaviour
             if (playerParty[i].character != null)
             {
                 playerParty[i].character.InitializeCharacter(playerParty[i].character.characterData);
+                playerParty[i].Turnprogress = 10000 / playerParty[i].character.Speed;
             }
         }
         for (int i = 0; i < enemyTeam.Length; i++)
@@ -47,8 +48,10 @@ public class CombatManager : MonoBehaviour
             if (enemyTeam[i].character != null)
             {
                 enemyTeam[i].character.InitializeCharacter(enemyTeam[i].character.characterData);
+                enemyTeam[i].Turnprogress = 10000 / enemyTeam[i].character.Speed;
             }
         }
+        ReadyNextCharacter();
     }
 
     private void MoveTargetLeft(InputAction.CallbackContext callbackContext)
@@ -57,22 +60,36 @@ public class CombatManager : MonoBehaviour
         {
             if (playerParty[i] == currentSelectedTargets[0])
             {
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
-                currentSelectedTargets.Clear();
-                currentSelectedTargets.Add(playerParty[i - 1]);
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
-                break;
+                for (int r = i - 1; r >= 0; r--)
+                {
+                    if (playerParty[r].character != null)
+                    {
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
+                        currentSelectedTargets.Clear();
+                        currentSelectedTargets.Add(playerParty[r]);
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
+                        return;
+                    }
+                }
+                return;
             }
         }
         for (int i = 1; i < enemyTeam.Length; i++)
         {
             if (enemyTeam[i] == currentSelectedTargets[0])
             {
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
-                currentSelectedTargets.Clear();
-                currentSelectedTargets.Add(enemyTeam[i - 1]);
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
-                break;
+                for (int r = i - 1; r >= 0; r--)
+                {
+                    if (enemyTeam[r].character != null)
+                    {
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
+                        currentSelectedTargets.Clear();
+                        currentSelectedTargets.Add(enemyTeam[r]);
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
+                        return;
+                    }
+                }
+                return;
             }
         }
     }
@@ -83,22 +100,36 @@ public class CombatManager : MonoBehaviour
         {
             if (playerParty[i] == currentSelectedTargets[0])
             {
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
-                currentSelectedTargets.Clear();
-                currentSelectedTargets.Add(playerParty[i + 1]);
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
-                break;
+                for (int r = i + 1; r < playerParty.Length; r++)
+                {
+                    if (playerParty[r].character != null)
+                    {
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
+                        currentSelectedTargets.Clear();
+                        currentSelectedTargets.Add(playerParty[r]);
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
+                        return;
+                    }
+                }
+                return;
             }
         }
         for (int i = 0; i < enemyTeam.Length - 1; i++)
         {
             if (enemyTeam[i] == currentSelectedTargets[0])
             {
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
-                currentSelectedTargets.Clear();
-                currentSelectedTargets.Add(enemyTeam[i + 1]);
-                currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
-                break;
+                for (int r = i + 1; r < enemyTeam.Length; r++)
+                {
+                    if (enemyTeam[r].character != null)
+                    {
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(false);
+                        currentSelectedTargets.Clear();
+                        currentSelectedTargets.Add(enemyTeam[r]);
+                        currentSelectedTargets[0].targetingBox.ToggleHighlight(true);
+                        return;
+                    }
+                }
+                return;
             }
         }
     }
@@ -183,9 +214,13 @@ public class CombatManager : MonoBehaviour
 
     public void CancelTargetSelection()
     {
-        for (int i = 0; i < currentSelectedTargets.Count; i++)
+        for (int i = 0; i < playerParty.Length; i++)
         {
-            currentSelectedTargets[i].targetingBox.ToggleHighlight(false);
+            playerParty[i].targetingBox.ToggleHighlight(false);
+        }
+        for (int i = 0; i < enemyTeam.Length; i++)
+        {
+            enemyTeam[i].targetingBox.ToggleHighlight(false);
         }
 
         //targetingSource = null;
@@ -256,24 +291,54 @@ public class CombatManager : MonoBehaviour
     }
 
 
-    //public static void ReadyNextCharacter()
-    //{
-    //    CharacterStats characterToAct = null;
-    //    if (actedCharacters.Count == playerParty.Count + enemyWave.Count)
-    //        actedCharacters.Clear();
-    //    for (int i = 0; i < playerParty.Count; i++)
-    //    {
-    //        if (!actedCharacters.Contains(playerParty[i]) && (characterToAct == null || playerParty[i].GetSpeed > characterToAct.GetSpeed))
-    //            characterToAct = playerParty[i];
-    //    }
-    //    for (int i = 0;i < enemyWave.Count; i++)
-    //    {
-    //        if (!actedCharacters.Contains(enemyWave[i]) && (characterToAct == null || enemyWave[i].GetSpeed > characterToAct.GetSpeed))
-    //            characterToAct = enemyWave[i];
-    //    }
-    //    characterToAct.StartTurn();
-    //    actedCharacters.Add(characterToAct);
-    //}
+    private void ReadyNextCharacter()
+    {
+        bool progressedTurn = false;
+        for (int i = 0; i < playerParty.Length; i++)
+        {
+            if (playerParty[i].character != null && playerParty[i].Turnprogress <= 0.01f)
+            {
+                playerParty[i].Turnprogress += 10000 / playerParty[i].character.Speed;
+                progressedTurn = true;
+                break;
+            }
+        }
+        if (!progressedTurn)
+        {
+            for (int i = 0; i < enemyTeam.Length; i++)
+            {
+                if (enemyTeam[i].character != null && enemyTeam[i].Turnprogress <= 0.01f)
+                {
+                    enemyTeam[i].Turnprogress += 10000 / enemyTeam[i].character.Speed;
+                    break;
+                }
+            }
+        }
+        
+        CombatPositionData nextToAct = new CombatPositionData();
+        for (int i = 0; i < playerParty.Length; i++)
+        {
+            if (playerParty[i].character != null)
+            {
+                if (nextToAct.character == null || playerParty[i].Turnprogress < nextToAct.Turnprogress)
+                    nextToAct = playerParty[i];
+            }
+        }
+        Debug.Log(nextToAct);
+        for (int i = 0; i < enemyTeam.Length; i++)
+        {
+            if (enemyTeam[i].character != null && enemyTeam[i].Turnprogress < nextToAct.Turnprogress)
+                nextToAct = enemyTeam[i];
+        }
+
+        float timeToReduce = nextToAct.Turnprogress;
+        for (int i = 0; i < playerParty.Length; i++)
+            playerParty[i].Turnprogress -= timeToReduce;
+        for (int i = 0; i < enemyTeam.Length; i++)
+            enemyTeam[i].Turnprogress -= timeToReduce;
+
+        nextToAct.character.StartTurn();
+    }
 
     public void PerformEndOfActionChecks()
     {
@@ -287,6 +352,31 @@ public class CombatManager : MonoBehaviour
             if (enemyTeam[i].character != null && enemyTeam[i].character.CheckForDeath())
                 enemyTeam[i].character = null;
         }
+
+        if (!CheckForCombatEnd())
+            ReadyNextCharacter();
+    }
+
+    private bool CheckForCombatEnd()
+    {
+        bool playerIsAlive = false;
+        bool enemyIsAlive = false;
+
+        for (int i = 0; i < playerParty.Length; i++)
+        {
+            if (playerParty[i].character != null)
+                playerIsAlive = true;
+        }
+        for (int i = 0; i < enemyTeam.Length; i++)
+        {
+            if (enemyTeam[i].character != null)
+                enemyIsAlive = true;
+        }
+        if (playerIsAlive && enemyIsAlive)
+            return false;
+
+        Debug.Log("Combat End");
+        return true;
     }
 }
 [Serializable]
