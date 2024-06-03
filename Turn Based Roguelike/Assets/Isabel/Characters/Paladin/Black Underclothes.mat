@@ -24,11 +24,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3d4798bfa3715b74caa36582f1c61eab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Mask_R_Emission:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3d4798bfa3715b74caa36582f1c61eab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
@@ -57,8 +57,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Brightness_Rim: 2
-    - Rim_Power: 5
+    - Brightness_Rim: 5
+    - Rim_Power: 0
     - Toon_Ramp_Offset: 0.5
     - Toon_Ramp_Smoothness: 0
     - _Ambient: 0.75
@@ -70,7 +70,7 @@ Material:
     - _ToonRampOffsetPoint: 0.62
     - _ToonRampSmoothness: 0.36
     m_Colors:
-    - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
+    - Toon_Ramp_Tint: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ToonRampTinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

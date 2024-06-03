@@ -59,7 +59,7 @@ Material:
     m_Floats:
     - Brightness_Rim: 4.86
     - Rim_Power: 2.45
-    - Toon_Ramp_Offset: 0.631
+    - Toon_Ramp_Offset: 0.089
     - Toon_Ramp_Smoothness: 0
     - _Ambient: 0.75
     - _QueueControl: 0
