@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Eye Shine
-  m_Shader: {fileID: -6465566751694194690, guid: 1f9c4f061540b8b43836555b2a615181, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 86f67b6b8a9de7a49b7d210ec944defd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,6 +23,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _EyeShine:
+        m_Texture: {fileID: 2800000, guid: ca06faf2d9badb74a8b79426e1a7931d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTexture:
         m_Texture: {fileID: 2800000, guid: a66f29963085b7f41928ec658e022929, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -54,7 +58,7 @@ Material:
     - _QueueOffset: 0
     - _RimLightBrightness: 0.86
     - _RimPower: 6.13
-    - _ToonRampOffset: -0.05
+    - _ToonRampOffset: 7.1
     - _ToonRampOffsetPoint: 0.29
     - _ToonRampSmoothness: 0.4
     m_Colors:

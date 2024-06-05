@@ -51,5 +51,6 @@ Material:
     - _ToonRampOffset: 0
     - _ToonRampOffsetPoint: 0
     - _ToonRampSmoothness: 0
-    m_Colors: []
+    m_Colors:
+    - _ToonRampTinting: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 0}
   m_BuildTextureStacks: []
