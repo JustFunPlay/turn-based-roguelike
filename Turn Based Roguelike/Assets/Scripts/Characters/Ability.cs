@@ -49,38 +49,7 @@ public class EffectTrigger
     public float ammount;
     public int duration;
 }
-public enum StatVar
-{
-    MaxHealth,
-    MagicHealing,
-    AttackHealing,
-    HealthHealing,
-    Armor,
-    MagicResist,
-    Attack,
-    Crit,
-    Magic,
-    ManaGain,
-    ManaRegen,
-    Speed,
-    Evasion,
-    Accuracy,
-    SkillPoint,
-    HealingDone,
-    HealingRecieved,
-    Reflect,
-    Stun,
-    Cleanse,
-    MagicDOT,
-    PhysicalDOT,
-    HealthDOT,
-    MagicHOT,
-    AttackHOT,
-    HealthHOT,
-    LifeSteal,
-    ArmorPierce,
-    MagicPierce
-}
+
 
 [System.Serializable]
 public class ConditionalCheck

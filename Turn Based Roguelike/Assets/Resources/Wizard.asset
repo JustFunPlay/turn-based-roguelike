@@ -15,9 +15,9 @@ MonoBehaviour:
   baseHealth: 50
   baseArmor: 12
   baseMagicResist: 12
-  baseAttack: 10
+  baseAttack: 20
   baseCritChance: 0
-  baseMagic: 10
+  baseMagic: 20
   baseResource: 0
   baseResourceRegen: 0
   baseSpeed: 95

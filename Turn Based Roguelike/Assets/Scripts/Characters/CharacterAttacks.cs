@@ -462,10 +462,10 @@ public class CharacterAttacks : CharacterStats
     protected void TriggerEffectOnTarget(CharacterStats target, EffectTrigger effect, bool isFriendly = false)
     {
         float convertedEffectValue = effect.ammount;
-        if (effect.statVar == StatVar.MagicHOT || effect.statVar == StatVar.MagicDOT || effect.statVar == StatVar.MagicHealing)
-            convertedEffectValue *= magic;
-        else if (effect.statVar == StatVar.AttackHOT || effect.statVar == StatVar.PhysicalDOT || effect.statVar == StatVar.AttackHealing)
-            convertedEffectValue *= attack;
+        //if (effect.statVar == StatVar.MagicHOT || effect.statVar == StatVar.MagicDOT || effect.statVar == StatVar.MagicHealing)
+        //    convertedEffectValue *= magic;
+        //else if (effect.statVar == StatVar.AttackHOT || effect.statVar == StatVar.PhysicalDOT || effect.statVar == StatVar.AttackHealing)
+        //    convertedEffectValue *= attack;
 
             if (effect.affectsSelf)
             ApplyBuff(effect.statVar, convertedEffectValue, effect.duration);

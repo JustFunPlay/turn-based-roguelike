@@ -9,19 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe721691daa9524abcbd81f4eed28d6, type: 3}
-  m_Name: Lay on Hands
+  m_Script: {fileID: 11500000, guid: feaa8b7977c0b4143be05f30e4221efd, type: 3}
+  m_Name: Defense boost ability
   m_EditorClassIdentifier: 
-  abilityName: Lay on hands
+  abilityName: Guardian
   resourceCost: 3
   description: 
   delayToInitialEffect: 1.7
   delayToEnd: 1.5
-  targeting: 1
+  targeting: 3
   animationName: Guardian
-  physicalHealingScaling: 0
-  magicHealingScaling: 1.5
-  targetMaxHealthScaling: 0
-  targetMissingHealthScaling: 0
-  bonusCritRate: 0
-  healParticle: {fileID: 5093039331659167404, guid: 19357a85bcc73404fb2c5881b6b13a8b, type: 3}
+  armorIncrease: 0.3
+  magicResistIncrease: 0.3
+  duration: 3
+  defenseParticle: {fileID: 705442848776419558, guid: b5c7a78f7a6469e4cad7d695fc3bc3e7, type: 3}

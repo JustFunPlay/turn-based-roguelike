@@ -126,85 +126,85 @@ public class CharacterStats : MonoBehaviour
                 case StatVar.Speed:
                     speedMod += buff.value;
                     break;
-                case StatVar.Evasion:
-                    evasion += buff.value;
-                    break;
-                case StatVar.Accuracy:
-                    accuracy += buff.value;
-                    break;
-                case StatVar.HealingDone:
-                    healingDoneMod += buff.value;
-                    break;
-                case StatVar.HealingRecieved:
-                    healingRecievedMod += buff.value;
-                    break;
-                case StatVar.Reflect:
-                    reflectMod += buff.value;
-                    break;
-                case StatVar.LifeSteal:
-                    lifeSteal += buff.value;
-                    break;
-                case StatVar.ArmorPierce:
-                    armorPierce += buff.value;
-                    break;
-                case StatVar.MagicPierce:
-                    magicPierce += buff.value;
-                    break;
+                //case StatVar.Evasion:
+                //    evasion += buff.value;
+                //    break;
+                //case StatVar.Accuracy:
+                //    accuracy += buff.value;
+                //    break;
+                //case StatVar.HealingDone:
+                //    healingDoneMod += buff.value;
+                //    break;
+                //case StatVar.HealingRecieved:
+                //    healingRecievedMod += buff.value;
+                //    break;
+                //case StatVar.Reflect:
+                //    reflectMod += buff.value;
+                //    break;
+                //case StatVar.LifeSteal:
+                //    lifeSteal += buff.value;
+                //    break;
+                //case StatVar.ArmorPierce:
+                //    armorPierce += buff.value;
+                //    break;
+                //case StatVar.MagicPierce:
+                //    magicPierce += buff.value;
+                //    break;
             }
         }
         foreach (StatBuff debuff in debuffs)
         {
-            switch (debuff.stat)
-            {
-                case StatVar.MaxHealth:
-                    hpMod -= debuff.value;
-                    break;
-                case StatVar.Armor:
-                    armorMod -= debuff.value;
-                    break;
-                case StatVar.MagicResist:
-                    mrMod -= debuff.value;
-                    break;
-                case StatVar.Attack:
-                    attackMod -= debuff.value;
-                    break;
-                case StatVar.Crit:
-                    critChance -= debuff.value;
-                    break;
-                case StatVar.Magic:
-                    magicMod -= debuff.value;
-                    break;
-                case StatVar.ManaRegen:
-                    manaRegenMod -= debuff.value;
-                    break;
-                case StatVar.Speed:
-                    speedMod -= debuff.value;
-                    break;
-                case StatVar.Evasion:
-                    evasion -= debuff.value;
-                    break;
-                case StatVar.Accuracy:
-                    accuracy -= debuff.value;
-                    break;
-                case StatVar.HealingDone:
-                    healingDoneMod -= debuff.value;
-                    break;
-                case StatVar.HealingRecieved:
-                    healingRecievedMod -= debuff.value;
-                    break;
-                case StatVar.Reflect:
-                    reflectMod -= debuff.value;
-                    break;
-                case StatVar.LifeSteal:
-                    lifeSteal -= debuff.value;
-                    break;
-                case StatVar.ArmorPierce:
-                    armorPierce -= debuff.value;
-                    break;
-                case StatVar.MagicPierce:
-                    magicPierce -= debuff.value;
-                    break;
-            }
+            //switch (debuff.stat)
+            //{
+            //    case StatVar.MaxHealth:
+            //        hpMod -= debuff.value;
+            //        break;
+            //    case StatVar.Armor:
+            //        armorMod -= debuff.value;
+            //        break;
+            //    case StatVar.MagicResist:
+            //        mrMod -= debuff.value;
+            //        break;
+            //    case StatVar.Attack:
+            //        attackMod -= debuff.value;
+            //        break;
+            //    case StatVar.Crit:
+            //        critChance -= debuff.value;
+            //        break;
+            //    case StatVar.Magic:
+            //        magicMod -= debuff.value;
+            //        break;
+            //    case StatVar.ManaRegen:
+            //        manaRegenMod -= debuff.value;
+            //        break;
+            //    case StatVar.Speed:
+            //        speedMod -= debuff.value;
+            //        break;
+            //    case StatVar.Evasion:
+            //        evasion -= debuff.value;
+            //        break;
+            //    case StatVar.Accuracy:
+            //        accuracy -= debuff.value;
+            //        break;
+            //    case StatVar.HealingDone:
+            //        healingDoneMod -= debuff.value;
+            //        break;
+            //    case StatVar.HealingRecieved:
+            //        healingRecievedMod -= debuff.value;
+            //        break;
+            //    case StatVar.Reflect:
+            //        reflectMod -= debuff.value;
+            //        break;
+            //    case StatVar.LifeSteal:
+            //        lifeSteal -= debuff.value;
+            //        break;
+            //    case StatVar.ArmorPierce:
+            //        armorPierce -= debuff.value;
+            //        break;
+            //    case StatVar.MagicPierce:
+            //        magicPierce -= debuff.value;
+            //        break;
+            //}
         }
         maxHP = (int)((characterClass.baseHealth + (level - 1) * characterClass.healthPerLevel) * hpMod);
         currentHP = Mathf.Min(currentHP, maxHP);
@@ -290,91 +290,91 @@ public class CharacterStats : MonoBehaviour
 
     public void ApplyBuff(StatVar stat, float value, int duration)
     {
-        switch (stat)
-        {
-            case StatVar.SkillPoint:
-                skillPoints = Mathf.Clamp(skillPoints + (int)value, 0, 10);
-                break;
-            case StatVar.Stun:
-                IsStunned = false;
-                break;
-            case StatVar.MagicDOT:
-                break;
-            case StatVar.PhysicalDOT:
-                break;
-            case StatVar.HealthDOT:
-                break;
-            case StatVar.MagicHOT:
-                break;
-            case StatVar.AttackHOT:
-                break;
-            case StatVar.HealthHOT:
-                break;
-            case StatVar.Cleanse:
-                debuffs.Clear();
-                RecalculateStats();
-                break;
-            case StatVar.MagicHealing:
-                ReceiveHealing(value, out _);
-                break;
-            case StatVar.AttackHealing:
-                ReceiveHealing(value, out _);
-                break;
-            case StatVar.HealthHealing:
-                ReceiveHealing(value * maxHP, out _);
-                break;
-            case StatVar.ManaGain:
-                currentMana = Mathf.Clamp(currentMana + maxMana * value, 0, maxMana);
-                break;
-            default:
-                buffs.Add(new StatBuff(stat, value, duration));
-                RecalculateStats();
-                break;
-        }
+        //switch (stat)
+        //{
+        //    case StatVar.SkillPoint:
+        //        skillPoints = Mathf.Clamp(skillPoints + (int)value, 0, 10);
+        //        break;
+        //    case StatVar.Stun:
+        //        IsStunned = false;
+        //        break;
+        //    case StatVar.MagicDOT:
+        //        break;
+        //    case StatVar.PhysicalDOT:
+        //        break;
+        //    case StatVar.HealthDOT:
+        //        break;
+        //    case StatVar.MagicHOT:
+        //        break;
+        //    case StatVar.AttackHOT:
+        //        break;
+        //    case StatVar.HealthHOT:
+        //        break;
+        //    case StatVar.Cleanse:
+        //        debuffs.Clear();
+        //        RecalculateStats();
+        //        break;
+        //    case StatVar.MagicHealing:
+        //        ReceiveHealing(value, out _);
+        //        break;
+        //    case StatVar.AttackHealing:
+        //        ReceiveHealing(value, out _);
+        //        break;
+        //    case StatVar.HealthHealing:
+        //        ReceiveHealing(value * maxHP, out _);
+        //        break;
+        //    case StatVar.ManaGain:
+        //        currentMana = Mathf.Clamp(currentMana + maxMana * value, 0, maxMana);
+        //        break;
+        //    default:
+        //        buffs.Add(new StatBuff(stat, value, duration));
+        //        RecalculateStats();
+        //        break;
+        //}
     }
     public void AddDebuff(StatVar stat, float value, int duration)
     {
-        switch (stat)
-        {
-            case StatVar.SkillPoint:
-                skillPoints = Mathf.Clamp(skillPoints - (int)value, 0, 10);
-                break;
-            case StatVar.Stun:
-                IsStunned = true;
-                break;
-            case StatVar.MagicDOT:
-                break;
-            case StatVar.PhysicalDOT:
-                break;
-            case StatVar.HealthDOT:
-                break;
-            case StatVar.MagicHOT:
-                break;
-            case StatVar.AttackHOT:
-                break;
-            case StatVar.HealthHOT:
-                break;
-            case StatVar.Cleanse:
-                buffs.Clear();
-                RecalculateStats();
-                break;
-            case StatVar.MagicHealing:
-                //ReceiveHealing(value, out _);
-                break;
-            case StatVar.AttackHealing:
-                //ReceiveHealing(value, out _);
-                break;
-            case StatVar.HealthHealing:
-                //ReceiveHealing(value * maxHP, out _);
-                break;
-            case StatVar.ManaGain:
-                currentMana = Mathf.Clamp(currentMana - maxMana * value, 0, maxMana);
-                break;
-            default:
-                debuffs.Add(new StatBuff(stat, value, duration));
-                RecalculateStats();
-                break;
-        }
+        //switch (stat)
+        //{
+        //    case StatVar.SkillPoint:
+        //        skillPoints = Mathf.Clamp(skillPoints - (int)value, 0, 10);
+        //        break;
+        //    case StatVar.Stun:
+        //        IsStunned = true;
+        //        break;
+        //    case StatVar.MagicDOT:
+        //        break;
+        //    case StatVar.PhysicalDOT:
+        //        break;
+        //    case StatVar.HealthDOT:
+        //        break;
+        //    case StatVar.MagicHOT:
+        //        break;
+        //    case StatVar.AttackHOT:
+        //        break;
+        //    case StatVar.HealthHOT:
+        //        break;
+        //    case StatVar.Cleanse:
+        //        buffs.Clear();
+        //        RecalculateStats();
+        //        break;
+        //    case StatVar.MagicHealing:
+        //        //ReceiveHealing(value, out _);
+        //        break;
+        //    case StatVar.AttackHealing:
+        //        //ReceiveHealing(value, out _);
+        //        break;
+        //    case StatVar.HealthHealing:
+        //        //ReceiveHealing(value * maxHP, out _);
+        //        break;
+        //    case StatVar.ManaGain:
+        //        currentMana = Mathf.Clamp(currentMana - maxMana * value, 0, maxMana);
+        //        break;
+        //    default:
+        //        debuffs.Add(new StatBuff(stat, value, duration));
+        //        RecalculateStats();
+        //        break;
+        //}
     }
 
 
@@ -383,16 +383,16 @@ public class CharacterStats : MonoBehaviour
         //do DoT and HoT
         for (int i = 0; i < effectsOverTime.Count; i++)
         {
-            if (effectsOverTime[i].stat == StatVar.AttackHOT || effectsOverTime[i].stat == StatVar.MagicHOT)
-                ReceiveHealing(effectsOverTime[i].value, out _);
-            else if (effectsOverTime[i].stat == StatVar.HealthHOT)
-                ReceiveHealing(effectsOverTime[i].value * maxHP, out _);
-            else if (effectsOverTime[i].stat == StatVar.PhysicalDOT)
-                TakeDamage(effectsOverTime[i].value, DamageType.Physical, null, 0, out _, out _);
-            else if (effectsOverTime[i].stat == StatVar.MagicDOT)
-                TakeDamage(effectsOverTime[i].value, DamageType.Magic, null, 0, out _, out _);
-            else if (effectsOverTime[i].stat == StatVar.HealthDOT)
-                TakeDamage(effectsOverTime[i].value * maxHP, DamageType.True, null, 0, out _, out _);
+            //if (effectsOverTime[i].stat == StatVar.AttackHOT || effectsOverTime[i].stat == StatVar.MagicHOT)
+            //    ReceiveHealing(effectsOverTime[i].value, out _);
+            //else if (effectsOverTime[i].stat == StatVar.HealthHOT)
+            //    ReceiveHealing(effectsOverTime[i].value * maxHP, out _);
+            //else if (effectsOverTime[i].stat == StatVar.PhysicalDOT)
+            //    TakeDamage(effectsOverTime[i].value, DamageType.Physical, null, 0, out _, out _);
+            //else if (effectsOverTime[i].stat == StatVar.MagicDOT)
+            //    TakeDamage(effectsOverTime[i].value, DamageType.Magic, null, 0, out _, out _);
+            //else if (effectsOverTime[i].stat == StatVar.HealthDOT)
+            //    TakeDamage(effectsOverTime[i].value * maxHP, DamageType.True, null, 0, out _, out _);
             effectsOverTime[i].remainingDuration--;
             if (effectsOverTime[i].remainingDuration < 0)
             {

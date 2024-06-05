@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static Cinemachine.AxisState;
 
 public class CharacterVisual : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class CharacterVisual : MonoBehaviour
     public float ManaRegen { get; private set; }
     public float Speed { get; private set; }
 
+    private List<StatusEffect> effects = new List<StatusEffect>();
+
     public void InitializeCharacter(CharacterData characterData)
     {
         Level = 1;
@@ -42,6 +45,17 @@ public class CharacterVisual : MonoBehaviour
     public void StartTurn()
     {
         Debug.Log($"{gameObject.name} starts their turn");
+
+        for (int i = 0; i < effects.Count; i++)
+        {
+            if (effects[i] != null)
+                effects[i].OnStartTurn();
+            if (effects[i] == null)
+            {
+                effects.RemoveAt(i);
+                i--;
+            }
+        }
         if (CombatManager.instance.enemyTeam.Contains(CombatManager.instance.GetOwnCombatPosition(this)))
         {
             UseRandomSkill();
@@ -49,6 +63,57 @@ public class CharacterVisual : MonoBehaviour
         else
         {
 
+        }
+    }
+
+    public void EndTurn()
+    {
+        for (int i = 0; i < effects.Count; i++)
+        {
+            if (effects[i] != null)
+                effects[i].OnEndTurn();
+            if (effects[i] == null)
+            {
+                effects.RemoveAt(i);
+                i--;
+            }
+        }
+        CombatManager.instance.PerformEndOfActionChecks();
+    }
+
+    public void AddStatusEffect(StatusEffect newEffect)
+    {
+        effects.Add(newEffect);
+    }
+
+    public void UpdateStat(float modifier, StatVar buff)
+    {
+        switch (buff)
+        {
+            case StatVar.MaxHealth:
+                MaxHP += (int)(modifier * (characterData.baseHealth + (Level - 1) * characterData.healthPerLevel));
+                break;
+            case StatVar.Armor:
+                Armor += modifier * (characterData.baseArmor + (Level - 1) * characterData.armorPerLevel);
+                break;
+            case StatVar.MagicResist:
+                MagicResist += modifier * (characterData.baseMagicResist + (Level - 1) * characterData.magicResistPerLevel);
+                break;
+            case StatVar.Attack:
+                Attack += modifier * (characterData.baseAttack + (Level - 1) * characterData.attackPerLevel);
+                break;
+            case StatVar.Crit:
+                CritRate += modifier;
+                break;
+            case StatVar.Magic:
+                Magic += modifier * (characterData.baseMagic + (Level - 1) * characterData.magicPerLevel);
+                break;
+            case StatVar.ManaRegen:
+                ManaRegen += modifier * (characterData.baseResourceRegen + (Level - 1) * characterData.resourceRegenPerLevel);
+                break;
+            case StatVar.Speed:
+                Speed += modifier * characterData.baseSpeed;
+                break;
         }
     }
 

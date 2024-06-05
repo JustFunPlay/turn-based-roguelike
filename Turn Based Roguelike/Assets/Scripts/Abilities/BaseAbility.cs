@@ -29,7 +29,7 @@ public class BaseAbility : ScriptableObject
     {
         yield return new WaitForSeconds(delayToEnd);
         Debug.Log($"{caster.character.gameObject.name} has finished using {abilityName}");
-        CombatManager.instance.PerformEndOfActionChecks();
+        caster.character.EndTurn();
     }
 }
 

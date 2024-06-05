@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New standard healing ability", menuName = "ScriptableObjects/Abilities/Support/Standard Heal")]
 public class HealTargets : BaseAbility
 {
-    [Header("AbilityDetails")]
+    [Header("Ability Details")]
     [SerializeField] private float physicalHealingScaling;
     [SerializeField] private float magicHealingScaling;
     [SerializeField] private float targetMaxHealthScaling;

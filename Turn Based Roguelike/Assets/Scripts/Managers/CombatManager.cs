@@ -137,6 +137,8 @@ public class CombatManager : MonoBehaviour
 
     public void PrepareTargetSelection(CharacterVisual source, Targeting targetingType, Action<CombatPositionData, CombatPositionData[]> startAbilityAction)
     {
+        CancelTargetSelection();
+
         targetingSource = GetOwnCombatPosition(source);
         currentTargetingType = targetingType;
         this.startAbilityAction = startAbilityAction;
