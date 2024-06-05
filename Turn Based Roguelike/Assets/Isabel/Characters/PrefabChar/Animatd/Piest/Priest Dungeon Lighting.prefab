@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fadd0df07df77f94baf5f26b2d23f43b, type: 2}
+    - target: {fileID: -6747131031586317085, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76b9a06c853f3f94e8a7f0c745393dc8, type: 2}
     - target: {fileID: -5613417973577866378, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -74,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6106a61de2d75a8408cfdda7f0113447, type: 2}
     - target: {fileID: 919132149155446097, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Name
-      value: Priest (1)
+      value: Priest Dungeon Lighting
       objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -84,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fadd0df07df77f94baf5f26b2d23f43b, type: 2}
+    - target: {fileID: 2025397276473015812, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76b9a06c853f3f94e8a7f0c745393dc8, type: 2}
     - target: {fileID: 5128063986421979777, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -92,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6106a61de2d75a8408cfdda7f0113447, type: 2}
+    - target: {fileID: 8510132731797305157, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5f64361c268911f4688f835653893bd0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

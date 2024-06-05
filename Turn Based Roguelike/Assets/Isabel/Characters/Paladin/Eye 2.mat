@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Eye 2
-  m_Shader: {fileID: -6465566751694194690, guid: 1f9c4f061540b8b43836555b2a615181, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 6c7fad51efa266e48bb46f1e3e4909ae, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,6 +23,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - MainTex:
+        m_Texture: {fileID: 2800000, guid: 76c70fa666d3e8a46a030a4862540e5c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Mask_R_Emission:
+        m_Texture: {fileID: 2800000, guid: 76c70fa666d3e8a46a030a4862540e5c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTexture:
         m_Texture: {fileID: 2800000, guid: 76c70fa666d3e8a46a030a4862540e5c, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -49,6 +57,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Brightness_Rim: 2.1
+    - Rim_Power: 0
+    - Toon_Ramp_Offset: 0.481
+    - Toon_Ramp_Smoothness: 0
     - _Ambient: 0.75
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -58,6 +70,8 @@ Material:
     - _ToonRampOffsetPoint: 0.62
     - _ToonRampSmoothness: 0.36
     m_Colors:
+    - Toon_Ramp_Tint: {r: 0.16953842, g: 0, b: 0.2679245, a: 1}
+    - _Color: {r: 0.9317048, g: 0.7905661, b: 1, a: 1}
     - _ToonRampTinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7607868703924571531
