@@ -71,7 +71,7 @@ Material:
     - _ToonRampSmoothness: 0.36
     m_Colors:
     - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
-    - _Color: {r: 1, g: 0.82521486, b: 0.6094339, a: 1}
+    - _Color: {r: 0.5999999, g: 0.49862257, b: 0.3747169, a: 1}
     - _ToonRampTinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7607868703924571531
