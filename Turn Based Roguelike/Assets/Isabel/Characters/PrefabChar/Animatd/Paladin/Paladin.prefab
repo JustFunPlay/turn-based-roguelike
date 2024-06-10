@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 90880cde4ea143b4cb43fc449859c0c4, type: 2}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.045913815
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.028083563
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalRotation.x
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalRotation.z
@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 4410e6d2beee40a499937753e3e94b83, type: 2}
-  centreOfMassOffset: 1.3
+  centreOfMassOffset: 1
   animator: {fileID: 5364846821833553550}
 --- !u!95 &5364846821833553550
 Animator:

@@ -40,6 +40,16 @@ public class CharacterVisual : MonoBehaviour
         if (MaxMana == 0)
             SkillPoints = 5;
         Speed = characterData.baseSpeed;
+        StartCoroutine(DoAltIdle());
+    }
+
+    private IEnumerator DoAltIdle()
+    {
+        while (CurrentHP > 0)
+        {
+            yield return new WaitForSeconds(Random.Range(5, 30));
+            PlayAnimation("AltIdle");
+        }
     }
 
     public void StartTurn()

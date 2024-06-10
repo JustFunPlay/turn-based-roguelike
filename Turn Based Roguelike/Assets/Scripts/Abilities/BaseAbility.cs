@@ -8,7 +8,7 @@ public class BaseAbility : ScriptableObject
     public int resourceCost;
     [Multiline] public string description;
     [SerializeField] protected float delayToInitialEffect = 0.5f;
-    [SerializeField] private float delayToEnd = 0.5f;
+    [SerializeField] protected float delayToEnd = 0.5f;
     [SerializeField] private Targeting targeting;
     [SerializeField] string animationName;
 
