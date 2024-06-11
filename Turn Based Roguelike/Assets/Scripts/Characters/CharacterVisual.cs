@@ -175,16 +175,16 @@ public class CharacterVisual : MonoBehaviour
             AddSkillPoints();
     }
 
-    public void TakeDamage(float damageToDo, DamageType damageType, out float damageDealt)
+    public void TakeDamage(float damageToDo, DamageType damageType, out float damageDealt, float resistIgnore = 0)
     {
         PlayAnimation("TakeDamage");
         switch (damageType)
         {
             case DamageType.Physical:
-                damageToDo *= 100 / (100 + Armor);
+                damageToDo *= 100 / (100 + Armor * Mathf.Clamp01(1 - resistIgnore));
                 break;
             case DamageType.Magic:
-                damageToDo *= 100 / (100 + MagicResist);
+                damageToDo *= 100 / (100 + MagicResist * Mathf.Clamp01(1 - resistIgnore));
                 break;
         }
         CurrentHP -= damageToDo;

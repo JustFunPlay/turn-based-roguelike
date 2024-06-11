@@ -393,33 +393,33 @@ public class CharacterStats : MonoBehaviour
             //    TakeDamage(effectsOverTime[i].value, DamageType.Magic, null, 0, out _, out _);
             //else if (effectsOverTime[i].stat == StatVar.HealthDOT)
             //    TakeDamage(effectsOverTime[i].value * maxHP, DamageType.True, null, 0, out _, out _);
-            effectsOverTime[i].remainingDuration--;
-            if (effectsOverTime[i].remainingDuration < 0)
-            {
-                effectsOverTime.RemoveAt(i);
-                i--;
-            }
+            //effectsOverTime[i].remainingDuration--;
+            //if (effectsOverTime[i].remainingDuration < 0)
+            //{
+            //    effectsOverTime.RemoveAt(i);
+            //    i--;
+            //}
         }
     }
     protected virtual void EndTurn()
     {
         for (int i = 0; i < buffs.Count; i++)
         {
-            buffs[i].remainingDuration--;
-            if (buffs[i].remainingDuration <= 0)
-            {
-                buffs.RemoveAt(i);
-                i--;
-            }
+            //buffs[i].remainingDuration--;
+            //if (buffs[i].remainingDuration <= 0)
+            //{
+            //    buffs.RemoveAt(i);
+            //    i--;
+            //}
         }
         for (int i = 0; i < debuffs.Count; i++)
         {
-            debuffs[i].remainingDuration--;
-            if (debuffs[i].remainingDuration <= 0)
-            {
-                debuffs.RemoveAt(i);
-                i--;
-            }
+            //debuffs[i].remainingDuration--;
+            //if (debuffs[i].remainingDuration <= 0)
+            //{
+            //    debuffs.RemoveAt(i);
+            //    i--;
+            //}
         }
         RecalculateStats();
         //CombatManager.ReadyNextCharacter();
@@ -433,16 +433,3 @@ public enum DamageType
     True
 }
 
-[System.Serializable]
-public class StatBuff
-{
-    public StatVar stat;
-    public float value;
-    public int remainingDuration;
-    public StatBuff(StatVar stat, float value, int remainingDuration)
-    {
-        this.stat = stat;
-        this.value = value;
-        this.remainingDuration = remainingDuration;
-    }
-}

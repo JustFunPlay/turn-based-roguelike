@@ -25,9 +25,11 @@ public class DefenseBoost : BaseAbility
 
         foreach (CombatPositionData target in validTargets)
         {
-            DefenseBuff newbuff = CreateInstance<DefenseBuff>();
+            StatBuffEffect newArmBuff = CreateInstance<StatBuffEffect>();
+            newArmBuff.OnApplication(target.character, duration, armorIncrease, StatVar.Armor);
+            StatBuffEffect newMrBuff = CreateInstance<StatBuffEffect>();
+            newMrBuff.OnApplication(target.character, duration, armorIncrease, StatVar.MagicResist);
 
-            newbuff.OnApplication(target.character, duration, armorIncrease, magicResistIncrease);
             if (defenseParticle != null)
                 Instantiate(defenseParticle, target.standingPosition.position, target.standingPosition.rotation);
         }
