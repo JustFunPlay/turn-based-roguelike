@@ -9,19 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe721691daa9524abcbd81f4eed28d6, type: 3}
-  m_Name: Lay on Hands
+  m_Script: {fileID: 11500000, guid: 0df427ff94d6a2c47beaa808d62787c9, type: 3}
+  m_Name: Prayr
   m_EditorClassIdentifier: 
-  abilityName: Lay on hands
-  resourceCost: 3
+  abilityName: Prayer
+  resourceCost: 200
   description: 
-  delayToInitialEffect: 1.7
-  delayToEnd: 1.5
-  targeting: 1
-  animationName: HealingHands
+  delayToInitialEffect: 0.5
+  delayToEnd: 0.5
+  targeting: 3
+  animationName: Prayer
   physicalHealingScaling: 0
-  magicHealingScaling: 1.5
+  magicHealingScaling: 0.5
   targetMaxHealthScaling: 0
   targetMissingHealthScaling: 0
   bonusCritRate: 0
+  regenModifier: 0.25
+  duration: 4
   healParticle: {fileID: 5093039331659167404, guid: 19357a85bcc73404fb2c5881b6b13a8b, type: 3}

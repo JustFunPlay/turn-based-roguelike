@@ -10,6 +10,7 @@ public class CharacterVisual : MonoBehaviour
 
     public float centreOfMassOffset;
     [SerializeField] private Animator animator;
+    public Transform[] abilityPoints;
 
     public int Level { get; private set; }
     public int Exp { get; private set; }
@@ -36,6 +37,10 @@ public class CharacterVisual : MonoBehaviour
         Armor = characterData.baseArmor + (Level - 1) * characterData.armorPerLevel;
         MagicResist = characterData.baseMagicResist + (Level - 1) * characterData.magicResistPerLevel;
         Attack = characterData.baseAttack + (Level -1) * characterData.attackPerLevel;
+        Magic = characterData.baseMagic + (Level - 1) * characterData.magicPerLevel;
+        MaxMana = characterData.baseResource + (Level - 1) * characterData.resourcePerLevel;
+        CurrentMana = MaxMana;
+        ManaRegen = characterData.baseResourceRegen + (Level - 1) * characterData.resourceRegenPerLevel;
         CritRate = characterData.baseCritChance;
         if (MaxMana == 0)
             SkillPoints = 5;
@@ -96,8 +101,9 @@ public class CharacterVisual : MonoBehaviour
         effects.Add(newEffect);
     }
 
-    public void UpdateStat(float modifier, StatVar buff)
+    public void IncreaseStat(float modifier, StatVar buff)
     {
+        modifier = Mathf.Abs(modifier);
         switch (buff)
         {
             case StatVar.MaxHealth:
@@ -123,6 +129,37 @@ public class CharacterVisual : MonoBehaviour
                 break;
             case StatVar.Speed:
                 Speed += modifier * characterData.baseSpeed;
+                break;
+        }
+    }
+    public void DecreaseStat(float modifier, StatVar buff)
+    {
+        modifier = Mathf.Abs(modifier);
+        switch (buff)
+        {
+            case StatVar.MaxHealth:
+                MaxHP -= (int)(modifier * (characterData.baseHealth + (Level - 1) * characterData.healthPerLevel));
+                break;
+            case StatVar.Armor:
+                Armor -= modifier * (characterData.baseArmor + (Level - 1) * characterData.armorPerLevel);
+                break;
+            case StatVar.MagicResist:
+                MagicResist -= modifier * (characterData.baseMagicResist + (Level - 1) * characterData.magicResistPerLevel);
+                break;
+            case StatVar.Attack:
+                Attack -= modifier * (characterData.baseAttack + (Level - 1) * characterData.attackPerLevel);
+                break;
+            case StatVar.Crit:
+                CritRate -= modifier;
+                break;
+            case StatVar.Magic:
+                Magic -= modifier * (characterData.baseMagic + (Level - 1) * characterData.magicPerLevel);
+                break;
+            case StatVar.ManaRegen:
+                ManaRegen -= modifier * (characterData.baseResourceRegen + (Level - 1) * characterData.resourceRegenPerLevel);
+                break;
+            case StatVar.Speed:
+                Speed -= modifier * characterData.baseSpeed;
                 break;
         }
     }
@@ -174,8 +211,14 @@ public class CharacterVisual : MonoBehaviour
     {
             AddSkillPoints();
     }
-
-    public void TakeDamage(float damageToDo, DamageType damageType, out float damageDealt, float resistIgnore = 0)
+    public void AddResource(int value)
+    {
+        if (MaxMana > 0)
+            CurrentMana = Mathf.Min(CurrentMana + value, MaxMana);
+        else
+            AddSkillPoints(value);
+    }
+    public bool TakeDamage(float damageToDo, DamageType damageType, out float damageDealt, float resistIgnore = 0)
     {
         PlayAnimation("TakeDamage");
         switch (damageType)
@@ -189,14 +232,17 @@ public class CharacterVisual : MonoBehaviour
         }
         CurrentHP -= damageToDo;
         damageDealt = damageToDo;
-        Debug.Log($"{gameObject.name} took {damageDealt} {damageType}damage");
+        Debug.Log($"{gameObject.name} took {damageDealt} {damageType} damage");
+        if (CurrentHP <= 0)
+            return true;
+        return false;
     }
     public bool CheckForDeath()
     {
         if (CurrentHP <= 0)
         {
             PlayAnimation("Death");
-            Destroy(gameObject, 1);
+            Destroy(gameObject, 0.1f);
             return true;
         }
         return false;

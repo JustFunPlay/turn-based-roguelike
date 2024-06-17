@@ -31,3 +31,7 @@ MonoBehaviour:
   resourceRegenPerLevel: 0
   abilities:
   - {fileID: 11400000, guid: 21dae374947e59248b6e4eae3c65ce0d, type: 2}
+  - {fileID: 11400000, guid: 366ac394036c70644aef5deac3fa117d, type: 2}
+  - {fileID: 11400000, guid: 26d9c7b10e6026644b109019fdaba87d, type: 2}
+  - {fileID: 11400000, guid: c51767c89e0abb048a70430a93193e01, type: 2}
+  - {fileID: 11400000, guid: b3902bcf6cc3c434480fe716311fe1f7, type: 2}

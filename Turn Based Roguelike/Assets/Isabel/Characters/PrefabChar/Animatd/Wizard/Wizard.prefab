@@ -130,7 +130,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0557f8f72a192f444a1a3b3c20212dea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 75ce8c283942be342af18a31287f0090, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4772671669148483613}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 75ce8c283942be342af18a31287f0090, type: 3}
       insertIndex: -1
@@ -156,9 +159,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 0}
+  characterData: {fileID: 11400000, guid: a0124ad345e42d044abfc09399df95c5, type: 2}
   centreOfMassOffset: 1
   animator: {fileID: 9184464764231937821}
+  abilityPoints:
+  - {fileID: 8090714764429124725}
+  - {fileID: 6724927318498695069}
+  - {fileID: 1695193559253113666}
+  - {fileID: 301459832504315084}
+  - {fileID: 931723483109747456}
+  - {fileID: 5390331456912417969}
 --- !u!95 &9184464764231937821
 Animator:
   serializedVersion: 5
@@ -180,3 +190,100 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &1880058752823967226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 75ce8c283942be342af18a31287f0090, type: 3}
+  m_PrefabInstance: {fileID: 2134132299649964561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5021890604592261110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1880058752823967226}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+      propertyPath: m_Name
+      value: Wizard Corcle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+--- !u!4 &301459832504315084 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4728312294920948538, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &931723483109747456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3936300591873880842, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1695193559253113666 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3298922554200671052, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4772671669148483613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5390331456912417969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8106731103245106361, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6724927318498695069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7430117904936816533, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8090714764429124725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5334891080433695869, guid: 5bb5ffd16c224d24c99a5a0a2c6415bd, type: 3}
+  m_PrefabInstance: {fileID: 5021890604592261110}
+  m_PrefabAsset: {fileID: 0}

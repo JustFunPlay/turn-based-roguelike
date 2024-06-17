@@ -6,7 +6,7 @@ public class StatusEffect : ScriptableObject
 {
     protected CharacterVisual character;
     protected int remainingDuration;
-    public virtual void OnApplication(CharacterVisual target, int duration)
+    protected void OnApplication(CharacterVisual target, int duration)
     {
         character = target;
         character.AddStatusEffect(this);

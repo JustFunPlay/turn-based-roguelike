@@ -11,13 +11,13 @@ public class StatBuffEffect : StatusEffect
     {
         buffAmmount = Value;
         buffEffect = buffType;
-        target.UpdateStat(buffAmmount, buffEffect);
+        target.IncreaseStat(buffAmmount, buffEffect);
         base.OnApplication(target, duration);
     }
 
     public override void OnRemove()
     {
-        character.UpdateStat(--buffAmmount, buffEffect);
+        character.DecreaseStat(buffAmmount, buffEffect);
         base.OnRemove();
     }
 }
