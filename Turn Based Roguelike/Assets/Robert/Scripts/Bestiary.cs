@@ -17,6 +17,7 @@ public class Bestiary : MonoBehaviour
         beasts[currentSelected].gameObject.SetActive(false);
         currentSelected = (currentSelected +1) % beasts.Length;
         beasts[currentSelected].gameObject.SetActive(true);
+        beasts[currentSelected].GetComponent<ObjectDetails>().NewInfo();
         Debug.Log(currentSelected);
     }
     public void PrevBeast()
@@ -28,6 +29,7 @@ public class Bestiary : MonoBehaviour
             currentSelected += beasts.Length;
         }
         beasts[currentSelected].gameObject.SetActive(true);
+        beasts[currentSelected].GetComponent<ObjectDetails>().NewInfo();
         Debug.Log(currentSelected);
     }
 }
