@@ -9,7 +9,7 @@ public class BaseAbility : ScriptableObject
     [Multiline] public string description;
     [SerializeField] protected float delayToInitialEffect = 0.5f;
     [SerializeField] protected float delayToEnd = 0.5f;
-    [SerializeField] private Targeting targeting;
+    [SerializeField] protected Targeting targeting;
     [SerializeField] string animationName;
 
     public void GetTarget(CharacterVisual caster)

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82eec3b72f4ee7488e6b1811c614bef, type: 3}
+  m_Name: za warudo
+  m_EditorClassIdentifier: 
+  abilityName: timestop
+  resourceCost: 0
+  description: 
+  delayToInitialEffect: 3.869048
+  delayToEnd: 1.785714
+  targeting: 6
+  animationName: ZaWarudo
+  timeStopDuration: 1.5
+  damageScaling: 4
+  bonusCritRate: 0.1

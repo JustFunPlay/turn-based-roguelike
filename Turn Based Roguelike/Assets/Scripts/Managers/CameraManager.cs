@@ -14,6 +14,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Transform[] enemyFocusPositions;
     [SerializeField] private Transform playerTeamFocusPosition;
     [SerializeField] private Transform enemyTeamFocusPosition;
+    [SerializeField] private GameObject inverseFilter;
 
     private Transform currentFocusPoint;
 
@@ -23,6 +24,7 @@ public class CameraManager : MonoBehaviour
         currentFocusPoint = playerTeamFocusPosition;
         cameraTransform.position = currentFocusPoint.position;
         cameraTransform.rotation = currentFocusPoint.rotation;
+        inverseFilter.SetActive(false);
     }
 
     public void SetFocusPosition(CombatPositionData combatPositionData)
@@ -91,4 +93,8 @@ public class CameraManager : MonoBehaviour
         currentFocusPoint = newPoint;
     }
 
+    public void ToggleInverseFilter(bool active)
+    {
+        inverseFilter.SetActive(active);
+    }
 }

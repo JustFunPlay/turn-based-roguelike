@@ -22,7 +22,7 @@ public class MagicExecute : BaseAbility
         //CameraManager.Instance.SetTargetPosition(validTargets[0]);
         float critroll = Random.Range(0f, 1f) + bonusCritRate + caster.character.CritRate;
 
-        MagicExecuteProjectile newOrb = Instantiate(projectile, validTargets[0].standingPosition.position + validTargets[0].standingPosition.up * validTargets[0].character.centreOfMassOffset, new Quaternion(1, 1, -1, 0));
+        MagicExecuteProjectile newOrb = Instantiate(projectile, validTargets[0].standingPosition.position + validTargets[0].standingPosition.up * validTargets[0].character.centreOfMassOffset, new Quaternion(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0));
         float baseDamage = caster.character.Magic * baseScaling;
         float bonusDamage = caster.character.Magic * maxBonusScaling;
         Debug.Log($"precalculated oblivon orb damage is {baseDamage} base damage and {bonusDamage} bonus damage, based on {caster.character.Magic} ability power");
