@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 75ce8c283942be342af18a31287f0090, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.782
+      value: 3.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 75ce8c283942be342af18a31287f0090, type: 3}
       propertyPath: m_LocalPosition.y
@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: -5613417973577866378, guid: 75ce8c283942be342af18a31287f0090, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dc976790ca3a05a4da8678afb34f8758, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ccfeeae6dca5fc41afe4cae42bd8ffa, type: 2}
     - target: {fileID: -3541986057159443426, guid: 75ce8c283942be342af18a31287f0090, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -159,6 +159,7 @@ MonoBehaviour:
   characterData: {fileID: 0}
   centreOfMassOffset: 1
   animator: {fileID: 1621273772982608669}
+  abilityPoints: []
 --- !u!95 &1621273772982608669
 Animator:
   serializedVersion: 5
