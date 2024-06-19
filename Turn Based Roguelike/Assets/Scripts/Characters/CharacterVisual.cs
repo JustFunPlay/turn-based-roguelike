@@ -257,4 +257,11 @@ public class CharacterVisual : MonoBehaviour
         if (characterData.abilities.Count > abilityIndex)
             characterData.abilities[abilityIndex].GetTarget(this);
     }
+    public void ToggleVisuals(bool enable)
+    {
+        foreach(SkinnedMeshRenderer renderer in GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            renderer.enabled = enable;
+        }
+    }
 }

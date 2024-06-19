@@ -36,6 +36,11 @@ public class CameraManager : MonoBehaviour
                 if (combatPositionData == CombatManager.instance.playerParty[i])
                 {
                     StartCoroutine(MoveToNewFocusPoint(playerFocusPositions[i]));
+                    CombatManager.instance.playerParty[i].character.ToggleVisuals(true);
+                }
+                else if (CombatManager.instance.playerParty[i].character != null)
+                {
+                    CombatManager.instance.playerParty[i].character.ToggleVisuals(false);
                 }
             }
         }
@@ -53,7 +58,11 @@ public class CameraManager : MonoBehaviour
     public void SetTeamView(CombatPositionData combatPositionData)
     {
         if (CombatManager.instance.playerParty.Contains(combatPositionData))
+        {
             StartCoroutine(MoveToNewFocusPoint(playerTeamFocusPosition));
+            foreach(CombatPositionData position in CombatManager.instance.playerParty)
+                position.character.ToggleVisuals(true);
+        }
         else
             StartCoroutine(MoveToNewFocusPoint(enemyTeamFocusPosition));
     }
@@ -67,6 +76,11 @@ public class CameraManager : MonoBehaviour
                 if (combatPositionData == CombatManager.instance.playerParty[i])
                 {
                     StartCoroutine(MoveToNewFocusPoint(playerFrontViewPositions[i]));
+                    CombatManager.instance.playerParty[i].character.ToggleVisuals(true);
+                }
+                else if(CombatManager.instance.playerParty[i].character != null)
+                {
+                    CombatManager.instance.playerParty[i].character.ToggleVisuals(false);
                 }
             }
         }

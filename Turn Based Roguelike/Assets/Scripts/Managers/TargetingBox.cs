@@ -10,6 +10,8 @@ public class TargetingBox : MonoBehaviour
 
     public void ToggleHighlight(bool enable)
     {
+        if(positionData.character != null)
+            highlightTarget.transform.localPosition = new Vector3(0, positionData.character.centreOfMassOffset, 0);
         highlightTarget.SetActive(enable);
     }
 }
