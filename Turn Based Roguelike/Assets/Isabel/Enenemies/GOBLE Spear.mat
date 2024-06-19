@@ -37,11 +37,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: 25a351d3a54e9794ca8a28a587949635, type: 3}
+        m_Texture: {fileID: 2800000, guid: 690fcdd0a2440944191345b2f1188952, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Mask_R_Emission:
-        m_Texture: {fileID: 2800000, guid: 25a351d3a54e9794ca8a28a587949635, type: 3}
+        m_Texture: {fileID: 2800000, guid: 690fcdd0a2440944191345b2f1188952, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -102,9 +102,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Brightness_Rim: 1.78
-    - Rim_Power: 0
-    - Toon_Ramp_Offset: 0.56
+    - Brightness_Rim: 1.82
+    - Rim_Power: 0.62
+    - Toon_Ramp_Offset: 0.814
     - Toon_Ramp_Smoothness: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
