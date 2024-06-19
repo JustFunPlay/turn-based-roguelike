@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9041996116223199208, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2c480025c408884dbc523e45d16c863, type: 2}
     - target: {fileID: -8679921383154817045, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.811
+      value: 4.9506464
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.109
+      value: -0.04349518
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,18 +52,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8017449571587430431, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e37199525ec36504d8c02be25e392d21, type: 2}
-    - target: {fileID: -8017449571587430431, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: fe6c9f68409994a4381dfaefafb2550a, type: 2}
     - target: {fileID: -7823293702887809713, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c2c480025c408884dbc523e45d16c863, type: 2}
+      objectReference: {fileID: 2100000, guid: e37199525ec36504d8c02be25e392d21, type: 2}
+    - target: {fileID: -7823293702887809713, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe6c9f68409994a4381dfaefafb2550a, type: 2}
     - target: {fileID: 919132149155446097, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_Name
       value: Lancer Dungon
@@ -81,13 +81,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 10f1c306f4b5c6144aea9e8c0beee852, type: 2}
     - target: {fileID: 3770507806488944445, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d582e65da922d6e4b93a7d7277db4956, type: 2}
-    - target: {fileID: 3770507806488944445, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b13e7a888a5a7124fbf14074381677b1, type: 2}
+    - target: {fileID: 4112984690662791721, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 437cc676012005148ad3f32263e782b9, type: 2}
     - target: {fileID: 5074512353664290214, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -106,9 +106,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2661451254837965324}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6602749493219290996}
   m_SourcePrefab: {fileID: 100100000, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
 --- !u!1 &7347850592975521718 stripped
@@ -116,22 +113,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 752a68508df1c7e439ad78bf737dc45b, type: 3}
   m_PrefabInstance: {fileID: 7582275061482928871}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2661451254837965324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7347850592975521718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 822fa84116843aa40b74ab273e747703, type: 2}
-  centreOfMassOffset: 0.7
-  animator: {fileID: 0}
-  abilityPoints: []
 --- !u!95 &6602749493219290996
 Animator:
   serializedVersion: 5
