@@ -11,7 +11,6 @@ public class SelfBuffAttack : BaseAbility
     [SerializeField] private StatBuff[] buffs;
 
     [Header("Animation Support")]
-    [SerializeField] private float delayBeforeMove;
     [SerializeField] private float delayToHit;
     [SerializeField] private float delayAfterHit;
     [SerializeField] private float distanceToTarget = 1f;
@@ -19,8 +18,6 @@ public class SelfBuffAttack : BaseAbility
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
-        yield return new WaitForSeconds(delayBeforeMove);
-        //yield return new WaitForSeconds(delayToInitialEffect);
         for (float t = 0; t <= delayToInitialEffect; t += Time.fixedDeltaTime)
         {
             yield return new WaitForFixedUpdate();

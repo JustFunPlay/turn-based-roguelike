@@ -15,23 +15,17 @@ MonoBehaviour:
   abilityName: Wyvern Piercer
   resourceCost: 5
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 0.2083333
+  delayToEnd: 1.041667
   targeting: 4
   animationName: WyvernStab
   attacks:
-  - damageModifier: 0.7
+  - damageModifier: 2.1
     bonusCritRate: 0
     armorPenetration: 0.5
-    delayAfterHit: 0.2
-  - damageModifier: 0.7
-    bonusCritRate: 0
-    armorPenetration: 0.5
-    delayAfterHit: 0.2
-  - damageModifier: 0.7
-    bonusCritRate: 0
-    armorPenetration: 0.5
-    delayAfterHit: 0.2
-  moveDuration: 0.1
-  delayToHit: 0
-  distanceToTarget: 1
+    delayAfterHit: 0
+  delayBeforeMove: 0.8333333
+  delayToHit: 0.1666667
+  overshootTime: 0.4166667
+  delayBeforeJumpBack: 0.4166667
+  distanceToTarget: -1

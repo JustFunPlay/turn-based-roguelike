@@ -9,19 +9,21 @@ public class MultiHitPiercingAttack : BaseAbility
     [SerializeField] private AttackSegment[] attacks;
 
     [Header("Animation Support")]
-    [SerializeField] private float moveDuration;
+    [SerializeField] private float delayBeforeMove;
     [SerializeField] private float delayToHit;
+    [SerializeField] private float overshootTime;
+    [SerializeField] private float delayBeforeJumpBack;
     [SerializeField] private float distanceToTarget = 1f;
 
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
-        //yield return new WaitForSeconds(delayBeforeMove);
-        yield return new WaitForSeconds(delayToInitialEffect);
-        for (float t = 0; t <= moveDuration; t += Time.fixedDeltaTime)
+        
+        yield return new WaitForSeconds(delayBeforeMove);
+        for (float t = 0; t <= delayToInitialEffect; t += Time.fixedDeltaTime)
         {
             yield return new WaitForFixedUpdate();
-            caster.character.transform.position = Vector3.Lerp(caster.standingPosition.position, validTargets[0].standingPosition.position + validTargets[0].standingPosition.forward * distanceToTarget, t / moveDuration);
+            caster.character.transform.position = Vector3.Lerp(caster.standingPosition.position, validTargets[0].standingPosition.position, t / delayToInitialEffect);
         }
 
         yield return new WaitForSeconds(delayToHit);
@@ -36,6 +38,14 @@ public class MultiHitPiercingAttack : BaseAbility
             yield return new WaitForSeconds(attacks[i].delayAfterHit);
 
         }
+        
+        for (float t = 0; t <= overshootTime; t += Time.fixedDeltaTime)
+        {
+            yield return new WaitForFixedUpdate();
+            caster.character.transform.position = Vector3.Lerp(validTargets[0].standingPosition.position, validTargets[0].standingPosition.position + validTargets[0].standingPosition.forward * distanceToTarget, t / overshootTime);
+        }
+
+        yield return new WaitForSeconds(delayBeforeJumpBack);
 
         for (float t = delayToEnd; t >= 0; t -= Time.fixedDeltaTime)
         {
