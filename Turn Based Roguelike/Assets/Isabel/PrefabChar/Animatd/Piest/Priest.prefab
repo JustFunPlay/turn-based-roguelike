@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.134
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dae0e4462d5e46c41945a64b33a4e737, type: 2}
+    - target: {fileID: -7643989733085726667, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -7248827071515774946, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -76,6 +80,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 76b9a06c853f3f94e8a7f0c745393dc8, type: 2}
+    - target: {fileID: -6452266432751415832, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4779730009506186550, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3286910004361259421, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025663018108745142, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 635547659545568360, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Name
       value: Priest
@@ -96,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fa913a06aaeb29544bee7ea40527a257, type: 2}
+    - target: {fileID: 8009987137999418058, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8510132731797305157, guid: 9744301163dfd4d4b892097671fcdef5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
