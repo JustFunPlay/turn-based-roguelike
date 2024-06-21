@@ -15,19 +15,18 @@ MonoBehaviour:
   abilityName: Thirsting Fangs
   resourceCost: 4
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1
+  delayToEnd: 1.041667
   targeting: 4
   animationName: LifestealFangs
   attacks:
   - damageModifier: 0.9
     bonusCritRate: 0
     lifeSteal: 0.2
-    delayAfterHit: 0.1
+    delayAfterHit: 0.7916667
   - damageModifier: 0.9
     bonusCritRate: 0
     lifeSteal: 0.2
-    delayAfterHit: 0.1
-  delayBeforeMove: 0
-  delayToHit: 0
+    delayAfterHit: 0.8333333
+  delayToHit: 1.25
   distanceToTarget: 1

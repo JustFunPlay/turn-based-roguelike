@@ -9,19 +9,16 @@ public class MultiHitHybridAttack : BaseAbility
     [SerializeField] private HybridAttackSegment[] attacks;
 
     [Header("Animation Support")]
-    [SerializeField] private float moveDuration;
     [SerializeField] private float delayToHit;
     [SerializeField] private float distanceToTarget = 1f;
 
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
-        //yield return new WaitForSeconds(delayBeforeMove);
-        yield return new WaitForSeconds(delayToInitialEffect);
-        for (float t = 0; t <= moveDuration; t += Time.fixedDeltaTime)
+        for (float t = 0; t <= delayToInitialEffect; t += Time.fixedDeltaTime)
         {
             yield return new WaitForFixedUpdate();
-            caster.character.transform.position = Vector3.Lerp(caster.standingPosition.position, validTargets[0].standingPosition.position + validTargets[0].standingPosition.forward * distanceToTarget, t / moveDuration);
+            caster.character.transform.position = Vector3.Lerp(caster.standingPosition.position, validTargets[0].standingPosition.position + validTargets[0].standingPosition.forward * distanceToTarget, t / delayToInitialEffect);
         }
 
         yield return new WaitForSeconds(delayToHit);

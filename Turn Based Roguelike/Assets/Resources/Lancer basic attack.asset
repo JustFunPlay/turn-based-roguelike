@@ -16,11 +16,11 @@ MonoBehaviour:
   resourceCost: 0
   description: 
   delayToInitialEffect: 1
-  delayToEnd: 1
+  delayToEnd: 1.041667
   targeting: 4
   animationName: Basic Attack
   damageScaling: 0.5
   bonusCritRate: 0
   delayToHit: 0.8333333
-  delayAfterHit: 0.8333333
+  delayAfterHit: 1.25
   distanceToTarget: 1

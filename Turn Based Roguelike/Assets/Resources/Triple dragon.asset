@@ -15,15 +15,22 @@ MonoBehaviour:
   abilityName: Dragon Talon Strike
   resourceCost: 5
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1
+  delayToEnd: 1.041667
   targeting: 4
   animationName: DRAGON!
   attacks:
   - physicalDamageModifier: 0.5
     magicDamageModifier: 0.2
     bonusCritRate: 0.15
-    delayAfterHit: 0.2
-  moveDuration: 0
-  delayToHit: 0
+    delayAfterHit: 0.4166667
+  - physicalDamageModifier: 0.5
+    magicDamageModifier: 0.2
+    bonusCritRate: 0.15
+    delayAfterHit: 1.25
+  - physicalDamageModifier: 0.5
+    magicDamageModifier: 0.2
+    bonusCritRate: 0.15
+    delayAfterHit: 1.833333
+  delayToHit: 0.8333333
   distanceToTarget: 1

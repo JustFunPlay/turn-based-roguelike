@@ -9,15 +9,12 @@ public class MultiHitLifestealAttack : BaseAbility
     [SerializeField] private LifeStealAttack[] attacks;
 
     [Header("Animation Support")]
-    [SerializeField] private float delayBeforeMove;
     [SerializeField] private float delayToHit;
     [SerializeField] private float distanceToTarget = 1f;
 
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
-        yield return new WaitForSeconds(delayBeforeMove);
-        //yield return new WaitForSeconds(delayToInitialEffect);
         for (float t = 0; t <= delayToInitialEffect; t += Time.fixedDeltaTime)
         {
             yield return new WaitForFixedUpdate();
