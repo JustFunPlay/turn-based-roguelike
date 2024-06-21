@@ -263,5 +263,9 @@ public class CharacterVisual : MonoBehaviour
         {
             renderer.enabled = enable;
         }
+        foreach(MeshRenderer renderer in GetComponentsInChildren<MeshRenderer>())
+        {
+            renderer.enabled = enable;
+        }
     }
 }
