@@ -15,17 +15,17 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.8113208, g: 0.7103977, b: 0.6301768, a: 1}
+  m_FogColor: {r: 0.5018867, g: 0.4473773, b: 0.37025982, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.05
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.9547169, g: 0.9136156, b: 0.28641498, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: de1d750fefeeac642bf9b11a3978ccf5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.54914194, g: 0.8553233, b: 0.92218935, a: 1}
+  m_IndirectSpecularColor: {r: 0.60099244, g: 0.31678337, b: 0.29079172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2052,6 +2052,10 @@ PrefabInstance:
     - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_Name
       value: GodRayParticle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941908104699850292, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_LocalScale.x
@@ -5101,7 +5105,7 @@ Transform:
   m_Children:
   - {fileID: 14698819}
   - {fileID: 691379444}
-  m_Father: {fileID: 1892795556}
+  m_Father: {fileID: 2034233683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &806263275
 MonoBehaviour:
@@ -6735,13 +6739,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190179587}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.61150503, z: -0, w: 0.79124063}
-  m_LocalPosition: {x: 5.113, y: 0.906, z: -2.615}
+  m_LocalRotation: {x: -0, y: -0.77800965, z: -0, w: 0.62825245}
+  m_LocalPosition: {x: 5.04, y: 0.906, z: -1.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863635730}
-  m_LocalEulerAnglesHint: {x: 0, y: -75.397, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -102.157, z: 0}
 --- !u!1001 &1195400354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6877,6 +6881,10 @@ PrefabInstance:
     - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_Name
       value: GodRayParticle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941908104699850292, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_LocalScale.x
@@ -7078,7 +7086,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.62941176, b: 0.2999999, a: 1}
+  m_Color: {r: 1, g: 0.60604644, b: 0.2999999, a: 1}
   m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
@@ -7137,13 +7145,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203815170}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.057849307, y: -0.93643, z: 0.29220334, w: 0.18539053}
+  m_LocalRotation: {x: 0.028001137, y: -0.9657083, z: 0.22970799, w: 0.11771873}
   m_LocalPosition: {x: 238.6, y: 26.2, z: 292.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 34.66, y: -157.603, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.76, y: -166.1, z: 0}
 --- !u!114 &1203815173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7450,7 +7458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251919485}
   m_Layer: 0
-  m_Name: EnTeamFcsPos
+  m_Name: BgLzrBm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7464,13 +7472,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251919484}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07441437, y: -0.6122733, z: 0.058041133, w: 0.7849938}
-  m_LocalPosition: {x: 2.273, y: 1.764, z: -1.694}
+  m_LocalRotation: {x: -0.07290846, y: -0.83891404, z: -0.12120024, w: 0.5255646}
+  m_LocalPosition: {x: 7.46, y: 0.5, z: 4.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863635730}
-  m_LocalEulerAnglesHint: {x: 10.83, y: -75.906, z: 0}
+  m_LocalEulerAnglesHint: {x: -16.26, y: -115.824, z: -0.303}
 --- !u!4 &1287753166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1880058752823967226, guid: 7fcf7a0a836a31345b6713b00db618ae, type: 3}
@@ -7560,6 +7568,10 @@ PrefabInstance:
     - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_Name
       value: GodRayParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941908104699850292, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_LocalScale.x
@@ -8202,6 +8214,10 @@ PrefabInstance:
     - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_Name
       value: GodRayParticle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941908104699850292, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_LocalScale.x
@@ -9493,10 +9509,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 5380161665226561378, guid: 7fcf7a0a836a31345b6713b00db618ae, type: 3}
-      propertyPath: characterData
-      value: 
-      objectReference: {fileID: 11400000, guid: a0124ad345e42d044abfc09399df95c5, type: 2}
     - target: {fileID: 5969194211451667610, guid: 7fcf7a0a836a31345b6713b00db618ae, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -10156,6 +10168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GodRayParticle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7941908104699850292, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7425767
@@ -10550,13 +10566,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767115315}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.066640496, y: 0.81942177, z: -0.097352274, w: 0.56091845}
-  m_LocalPosition: {x: 1.745, y: 1.49, z: -0.32}
+  m_LocalRotation: {x: -0.075504854, y: 0.7630094, z: -0.09065018, w: -0.63552976}
+  m_LocalPosition: {x: 5.58, y: 1.08, z: -0.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863635730}
-  m_LocalEulerAnglesHint: {x: 13.551, y: 111.214, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.551, y: 259.58398, z: 0}
 --- !u!1001 &1771569934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11286,8 +11302,7 @@ Transform:
   m_LocalPosition: {x: 4.06, y: 0.883, z: 4.834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 806263274}
+  m_Children: []
   m_Father: {fileID: 863635730}
   m_LocalEulerAnglesHint: {x: 0, y: -128.575, z: 0}
 --- !u!1001 &1895967437
@@ -11826,6 +11841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GodRayParticle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1893440015543209873, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7941908104699850292, guid: 832655fc1a923da4b91d2c56376bb2e5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7425767
@@ -12042,7 +12061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034233683}
   m_Layer: 0
-  m_Name: PlFrntPos1
+  m_Name: BigLzerBm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12056,13 +12075,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034233682}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0565683, y: 0.85009694, z: -0.093341, w: 0.5151919}
-  m_LocalPosition: {x: 1.678, y: 1.383, z: 3.847}
+  m_LocalRotation: {x: -0.0024696316, y: 0.8686755, z: -0.033454053, w: -0.4942446}
+  m_LocalPosition: {x: 4.85, y: 0.75, z: 4.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 806263274}
   m_Father: {fileID: 863635730}
-  m_LocalEulerAnglesHint: {x: 12.532, y: 117.565, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.472, y: 239.327, z: 1.652}
 --- !u!1 &2046463542
 GameObject:
   m_ObjectHideFlags: 0
