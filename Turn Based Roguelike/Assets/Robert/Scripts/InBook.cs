@@ -8,7 +8,7 @@ public class InBook : MonoBehaviour
     public GameObject weaponsTab;
     public GameObject bestiaryTab;
     public GameObject goBackButton;
-    public GameObject menuButtons;
+    public GameObject mainButtons;
     public GameObject catalog;
     public GameObject leftPage1Button;
     public GameObject leftPage2Button;
@@ -17,19 +17,21 @@ public class InBook : MonoBehaviour
     public Animator animator;
     public void OpenUI()
     {
-        rightPage2Button.SetActive(true);
-        rightPage3Button.SetActive(true);
-        bestiaryTab.SetActive(true);
-        goBackButton.SetActive(true);
-        Debug.Log("book opened");
-        animator.SetInteger("Book", 0);
+        if (gameObject.activeInHierarchy)
+        {
+            rightPage2Button.SetActive(true);
+            rightPage3Button.SetActive(true);
+            bestiaryTab.SetActive(true);
+            goBackButton.SetActive(true);
+            Debug.Log("book opened");
+            animator.SetInteger("Book", 0);
+        }
     }
     public void CloseBook()
     {
-        menuButtons.SetActive(true);
-        catalog.SetActive(false);
         animator.SetInteger("Book", 0);
-        Debug.Log("book closed");
+        catalog.SetActive(false);
+        mainButtons.SetActive(true);
     }
     public void PageOne()
     {
@@ -45,6 +47,15 @@ public class InBook : MonoBehaviour
     }
     public void CloseBookButton()
     {
+        leftPage1Button.SetActive(false);
+        leftPage2Button.SetActive(false);
+        rightPage2Button.SetActive(false);
+        rightPage3Button.SetActive(false);
+        goBackButton.SetActive(false);
+        bestiaryTab.SetActive(false);
+        weaponsTab.SetActive(false);
+        characterTab.SetActive(false);
+        goBackButton.SetActive(false);
         animator.SetInteger("Book", 4);
     }
     public void CloseAllUI()

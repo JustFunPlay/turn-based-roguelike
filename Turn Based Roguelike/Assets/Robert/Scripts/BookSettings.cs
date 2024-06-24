@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Book : MonoBehaviour
+public class BookSettings : MonoBehaviour
 {
     public GameObject mainButtons;
-    public GameObject catalog;
+    public GameObject settings;
+    public GameObject settingsUI;
     public Animator animator;
-    public void StartAnim()
+    public void SettingsButton()
     {
         mainButtons.SetActive(false);
-        catalog.SetActive(true);
+        settings.SetActive(true);
         animator.SetInteger("Book", 1);
     }
-    public void ExitBook()
+    public void ExitSettings()
     {
+        settingsUI.SetActive(false);
         animator.SetInteger("Book", 4);
     }
 }
