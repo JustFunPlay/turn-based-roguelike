@@ -15,10 +15,11 @@ MonoBehaviour:
   abilityName: Retribution
   resourceCost: 20
   description: 
-  delayToInitialEffect: 0.75
-  delayToEnd: 0.6666667
+  delayToInitialEffect: 0.7083333
+  delayToEnd: 0.3
   targeting: 4
   animationName: Retribution
   damageScaling: 0.6
   bonusCritRate: 0
   selfHealingModifer: 0.2
+  projectile: {fileID: 8842172225344947344, guid: 0ec7857a6b588934ba8cba0dd4e7c9c9, type: 3}

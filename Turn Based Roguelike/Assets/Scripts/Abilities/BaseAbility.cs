@@ -31,6 +31,11 @@ public class BaseAbility : ScriptableObject
         Debug.Log($"{caster.character.gameObject.name} has finished using {abilityName}");
         caster.character.EndTurn();
     }
+
+    public virtual void AltEndAbility(CombatPositionData caster, bool isCrit)
+    {
+        caster.character.EndTurn();
+    }
 }
 
 public enum Targeting

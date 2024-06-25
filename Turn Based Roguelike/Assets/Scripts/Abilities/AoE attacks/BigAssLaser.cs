@@ -13,12 +13,14 @@ public class BigAssLaser : BaseAbility
 
     [SerializeField] private GameObject laserBeam;
 
+    [SerializeField] private int[] actionCamIndexes;
+
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
-        CameraManager.Instance.SetTargetPosition(caster);
+        CameraManager.Instance.SetActionCamPosition(actionCamIndexes[0]);
         yield return new WaitForSeconds(delayToInitialEffect);
 
-        CameraManager.Instance.SetTeamView(validTargets[0]);
+        CameraManager.Instance.SetActionCamPosition(actionCamIndexes[1]);
         Vector3 laserPosition = new Vector3();
         foreach (CombatPositionData positionData in validTargets)
         {

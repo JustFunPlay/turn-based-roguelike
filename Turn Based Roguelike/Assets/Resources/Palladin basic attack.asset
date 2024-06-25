@@ -15,12 +15,12 @@ MonoBehaviour:
   abilityName: Basic Attack
   resourceCost: 0
   description: 
-  delayToInitialEffect: 0.3030303
-  delayToEnd: 0.6
+  delayToInitialEffect: 1
+  delayToEnd: 1
   targeting: 4
   animationName: Basic Attack
   damageScaling: 0.5
   bonusCritRate: 0
-  delayToHit: 0.1515152
-  delayAfterHit: 0.454545
-  distanceToTarget: 2
+  delayToHit: 0.5681818
+  delayAfterHit: 0.719697
+  distanceToTarget: 1

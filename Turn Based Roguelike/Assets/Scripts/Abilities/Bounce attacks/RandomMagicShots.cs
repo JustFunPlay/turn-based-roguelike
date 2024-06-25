@@ -30,7 +30,7 @@ public class RandomMagicShots : BaseAbility
         }
     }
 
-    public void OnHit(CombatPositionData caster, bool isCrit)
+    public override void AltEndAbility(CombatPositionData caster, bool isCrit)
     {
         receivedHits++;
         if (isCrit)

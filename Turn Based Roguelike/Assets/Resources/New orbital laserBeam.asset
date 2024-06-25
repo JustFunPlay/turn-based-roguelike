@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Judgement
   resourceCost: 5
   description: 
-  delayToInitialEffect: 2
+  delayToInitialEffect: 1.190476
   delayToEnd: 3
   targeting: 6
   animationName: LaserBeam
@@ -24,3 +24,4 @@ MonoBehaviour:
   delayBetweenHits: 0.25
   bonusCritRate: 0
   laserBeam: {fileID: 8379370648477062446, guid: 5afc93524d921f24a8bafe133f29f232, type: 3}
+  actionCamIndexes: 0000000001000000

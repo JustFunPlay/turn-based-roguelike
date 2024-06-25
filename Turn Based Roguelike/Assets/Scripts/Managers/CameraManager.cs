@@ -15,6 +15,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Transform playerTeamFocusPosition;
     [SerializeField] private Transform enemyTeamFocusPosition;
     [SerializeField] private GameObject inverseFilter;
+    [SerializeField] private Transform[] actionCamPositions;
 
     private Transform currentFocusPoint;
 
@@ -94,6 +95,11 @@ public class CameraManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetActionCamPosition(int index)
+    {
+        StartCoroutine(MoveToNewFocusPoint(actionCamPositions[index]));
     }
 
     private IEnumerator MoveToNewFocusPoint(Transform newPoint)

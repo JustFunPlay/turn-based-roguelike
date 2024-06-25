@@ -15,10 +15,13 @@ MonoBehaviour:
   abilityName: Smite
   resourceCost: 3
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1
+  delayToEnd: 1
   targeting: 4
-  animationName: Smite
+  animationName: SMITE
   physicalDamageScaling: 1
   magicDamageScaling: 0.5
   bonusCritRate: 0
+  delayToHit: 1.4583334
+  delayAfterHit: 0.2083333
+  distanceToTarget: 1
