@@ -46,6 +46,7 @@ public class CharacterVisual : MonoBehaviour
             SkillPoints = 5;
         Speed = characterData.baseSpeed;
         StartCoroutine(DoAltIdle());
+        CombatManager.instance.GetOwnCombatPosition(this).targetingBox.OnInitialize(MaxHP);
     }
 
     private IEnumerator DoAltIdle()
@@ -233,6 +234,7 @@ public class CharacterVisual : MonoBehaviour
         CurrentHP -= damageToDo;
         damageDealt = damageToDo;
         Debug.Log($"{gameObject.name} took {damageDealt} {damageType} damage");
+        CombatManager.instance.GetOwnCombatPosition(this).targetingBox.TakeDamage(CurrentHP, damageDealt);
         if (CurrentHP <= 0)
             return true;
         return false;
@@ -251,6 +253,7 @@ public class CharacterVisual : MonoBehaviour
     {
         healingDone = Mathf.Min(healingToDo, MaxHP - CurrentHP);
         CurrentHP = Mathf.Clamp(CurrentHP + healingToDo, 0, MaxHP);
+        CombatManager.instance.GetOwnCombatPosition(this).targetingBox.TakeDamage(CurrentHP, healingDone, true);
     }
     public void UseAbility(int abilityIndex)
     {
