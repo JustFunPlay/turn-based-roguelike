@@ -150,27 +150,34 @@ public class CombatManager : MonoBehaviour
         {
             case Targeting.Enemy:
                 currentSelectedTargets.Add(GetRandomTarget(targetingSource, targetingType));
+                CameraManager.Instance.SetFocusPosition(targetingSource);
                 break;
             case Targeting.EnemyRandom:
                 SelectEntireParty(!isPlayer);
+                CameraManager.Instance.SetFocusPosition(targetingSource);
                 break;
             case Targeting.EnemyTeam:
                 SelectEntireParty(!isPlayer);
+                CameraManager.Instance.SetFocusPosition(targetingSource);
                 break;
             case Targeting.Self:
                 currentSelectedTargets.Add(targetingSource);
                 if (isPlayer) CameraManager.Instance.SetTargetPosition(targetingSource);
+                else CameraManager.Instance.SetFocusPosition(targetingSource);
                 break;
             case Targeting.Ally:
                 currentSelectedTargets.Add(GetRandomTarget(targetingSource, targetingType));
                 if (isPlayer) CameraManager.Instance.SetTeamView(targetingSource);
+                else CameraManager.Instance.SetFocusPosition(targetingSource);
                 break;
             case Targeting.AllyRandom:
                 if (isPlayer) CameraManager.Instance.SetTeamView(targetingSource);
+                else CameraManager.Instance.SetFocusPosition(targetingSource);
                 SelectEntireParty(isPlayer);
                 break;
             case Targeting.AllyTeam:
                 if (isPlayer) CameraManager.Instance.SetTeamView(targetingSource);
+                else CameraManager.Instance.SetFocusPosition(targetingSource);
                 SelectEntireParty(isPlayer);
                 break;
         }
@@ -354,12 +361,18 @@ public class CombatManager : MonoBehaviour
         for (int i = 0; i < playerParty.Length; i++)
         {
             if (playerParty[i].character != null && playerParty[i].character.CheckForDeath())
+            {
                 playerParty[i].character = null;
+                playerParty[i].targetingBox.DisableHealthBar();
+            }
         }
         for (int i = 0; i < enemyTeam.Length; i++)
         {
             if (enemyTeam[i].character != null && enemyTeam[i].character.CheckForDeath())
+            {
+                enemyTeam[i].targetingBox.DisableHealthBar();
                 enemyTeam[i].character = null;
+            }
         }
 
         if (!CheckForCombatEnd())

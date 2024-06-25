@@ -11,7 +11,7 @@ public class DamagePopup : MonoBehaviour
         transform.LookAt(Camera.main.transform.position, Vector3.up);
         GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-3f, 3f), 3, 0), ForceMode.VelocityChange);
         damageShower.color = isHealing ? Color.green : Color.red;
-        damageShower.text = value.ToString();
+        damageShower.text = ((int)value).ToString();
         Destroy(gameObject, 0.75f);
     }
 }

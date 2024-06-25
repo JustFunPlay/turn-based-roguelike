@@ -23,7 +23,11 @@ public class EnemyDamageIndicatorTest : MonoBehaviour
     {
         hpSlider.value = currentHealth;
         if (popup == null) return;
-        DamagePopup newpopup = Instantiate(popup, transform.position + (transform.right * Random.Range(-0.5f, 0.5f)) + (transform.up * Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+        DamagePopup newpopup = Instantiate(popup, centerOfMass.position + (transform.right * Random.Range(-0.5f, 0.5f)) + (transform.up * Random.Range(-0.5f, 0.5f)), Quaternion.identity);
         newpopup.ShowDamage(value, isHealing);
+    }
+    private void FixedUpdate()
+    {
+        transform.LookAt(Camera.main.transform.position, Vector3.up);
     }
 }

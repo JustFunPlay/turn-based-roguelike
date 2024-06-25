@@ -74,7 +74,7 @@ public class CharacterVisual : MonoBehaviour
         }
         if (CombatManager.instance.enemyTeam.Contains(CombatManager.instance.GetOwnCombatPosition(this)))
         {
-            UseRandomSkill();
+            Invoke("UseRandomSkill", 0.5f);
         }
         else
         {

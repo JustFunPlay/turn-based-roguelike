@@ -9,16 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ce4165f9a4a1244d81bba4be734e538, type: 3}
-  m_Name: priest melee attack
+  m_Script: {fileID: 11500000, guid: d5016d76b2b7f864a8f0fca7778e2668, type: 3}
+  m_Name: axe goblin basic attack
   m_EditorClassIdentifier: 
-  abilityName: Basic attack
+  abilityName: basic attack
   resourceCost: 0
   description: 
-  delayToInitialEffect: 0.3205128
-  delayToEnd: 0.60897434
+  delayToInitialEffect: 0.1
+  delayToEnd: 0.1
   targeting: 4
   animationName: BasicAttack
   damageScaling: 0.5
-  bonusCritRate: 0.2
-  distanceBehindTarget: 1
+  bonusCritRate: 0
+  delayToHit: 0.8333333
+  delayAfterHit: 0.65
+  distanceToTarget: 1

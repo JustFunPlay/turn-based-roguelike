@@ -19,12 +19,15 @@ public class TargetingBox : MonoBehaviour
         highlightTarget.transform.localPosition = new Vector3(0, positionData.character.centreOfMassOffset, 0);
         hpBar.gameObject.SetActive(true);
         hpBar.transform.localPosition = new Vector3(0, positionData.character.centreOfMassOffset * 2, 0);
-        hpBar.SetMaxHealth(maxHealth, transform);
+        hpBar.SetMaxHealth(maxHealth, highlightTarget.transform);
     }
     public void TakeDamage(float currentHealth, float value, bool isHealing = false)
     {
         if(hpBar != null)
-        hpBar.TakeDamage(currentHealth, value, isHealing);
+            hpBar.TakeDamage(currentHealth, value, isHealing);
     }
-
+    public void DisableHealthBar()
+    {
+        hpBar.gameObject.SetActive(false);
+    }
 }
