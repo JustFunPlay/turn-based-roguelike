@@ -3,26 +3,27 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class EnemyDamageIndicatorTest : MonoBehaviour
 {
-    public Slider hpSlider;
-    public GameObject damageShower;
-    public float damageAmount;
-    public void DoDamageTest()
+    [SerializeField] private Slider hpSlider;
+    [SerializeField] private float damageAmount;
+    [SerializeField] private bool testHealing = false;
+    [SerializeField] private DamagePopup popup;
+    private Transform centerOfMass;
+
+    public void SetMaxHealth(int maxHealth, Transform center)
     {
-        TakeDamage(damageAmount);
+        centerOfMass = center;
+        hpSlider.maxValue = maxHealth;
+        hpSlider.value = maxHealth;
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(float currentHealth, float value, bool isHealing = false)
     {
-        hpSlider.value -= damage;
-        StartCoroutine(DamageValueShower());
-    }
-    public IEnumerator DamageValueShower()
-    {
-        damageShower.SetActive(true);
-        damageShower.GetComponent<Text>().text = "-" + damageAmount.ToString();
-        yield return new WaitForSeconds(1.9f);
-        damageShower.SetActive(false);
+        hpSlider.value = currentHealth;
+        if (popup == null) return;
+        DamagePopup newpopup = Instantiate(popup, transform.position + (transform.right * Random.Range(-0.5f, 0.5f)) + (transform.up * Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+        newpopup.ShowDamage(value, isHealing);
     }
 }
