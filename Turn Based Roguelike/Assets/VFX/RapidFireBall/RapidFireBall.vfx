@@ -3879,14 +3879,14 @@ MonoBehaviour:
   - m_Id: 2
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614800}
-      inputSlot: {fileID: 8926484042661615010}
+      inputSlot: {fileID: 8926484042661615012}
     position: {x: 595.3334, y: 2101.3335}
     expandedSlots: []
     expanded: 0
   - m_Id: 3
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614800}
-      inputSlot: {fileID: 8926484042661615011}
+      inputSlot: {fileID: 8926484042661615013}
     position: {x: -269.33334, y: 1942}
     expandedSlots: []
     expanded: 0
@@ -3926,8 +3926,8 @@ MonoBehaviour:
   m_LinkedSlots:
   - {fileID: 8926484042661614722}
   - {fileID: 8926484042661614785}
-  - {fileID: 8926484042661615010}
-  - {fileID: 8926484042661615011}
+  - {fileID: 8926484042661615012}
+  - {fileID: 8926484042661615013}
 --- !u!114 &8926484042661614801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5065,9 +5065,9 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
+  - {fileID: 8926484042661615012}
   - {fileID: 8926484042661614839}
   - {fileID: 8926484042661614840}
-  - {fileID: 8926484042661615010}
   m_OutputSlots: []
   m_Label: 
   m_Data: {fileID: 8926484042661614568}
@@ -5226,9 +5226,9 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
+  - {fileID: 8926484042661615013}
   - {fileID: 8926484042661614845}
   - {fileID: 8926484042661614846}
-  - {fileID: 8926484042661615011}
   m_OutputSlots: []
   m_Label: 
   m_Data: {fileID: 8926484042661614915}
@@ -8995,7 +8995,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
   m_Direction: 0
   m_LinkedSlots: []
---- !u!114 &8926484042661615010
+--- !u!114 &8926484042661615012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9013,7 +9013,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615010}
+  m_MasterSlot: {fileID: 8926484042661615012}
   m_MasterData:
     m_Owner: {fileID: 8926484042661614838}
     m_Value:
@@ -9023,14 +9023,14 @@ MonoBehaviour:
       m_SerializableObject: 
     m_Space: 2147483647
   m_Property:
-    name: mainTexture
+    name: _Texture2D
     m_serializedType:
       m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 0
   m_LinkedSlots:
   - {fileID: 8926484042661614800}
---- !u!114 &8926484042661615011
+--- !u!114 &8926484042661615013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9048,7 +9048,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615011}
+  m_MasterSlot: {fileID: 8926484042661615013}
   m_MasterData:
     m_Owner: {fileID: 8926484042661614844}
     m_Value:
@@ -9058,7 +9058,7 @@ MonoBehaviour:
       m_SerializableObject: 
     m_Space: 2147483647
   m_Property:
-    name: mainTexture
+    name: _Texture2D
     m_serializedType:
       m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
