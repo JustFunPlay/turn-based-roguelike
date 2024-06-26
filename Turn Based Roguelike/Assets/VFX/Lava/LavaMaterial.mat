@@ -50,9 +50,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CellDensity: 10
+    - _CellDensity: 150
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Scale: 0.005
     - _VoronoiSpeed: 1
     m_Colors:
     - _CellColor: {r: 0.8232272, g: 0.01786261, b: 0, a: 0}
