@@ -23,7 +23,7 @@ public class RandomMagicShots : BaseAbility
             CombatPositionData target = CombatManager.instance.GetRandomTarget(caster, targeting);
             float critroll = Random.Range(0f, 1f) + bonusCritRate + caster.character.CritRate;
             MagicShotProjectile newProjectile = Instantiate(projectile, caster.character.abilityPoints[i%caster.character.abilityPoints.Length].position, Quaternion.identity);
-            newProjectile.InitializeProjectile(caster, target, damageToDo, critroll, this);
+            newProjectile.InitializeProjectile(caster, target, damageToDo, critroll, DamageType.Magic, this);
 
             yield return new WaitForSeconds(delayBetweenAttacks);
 

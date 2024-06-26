@@ -21,7 +21,7 @@ public class HealSelfAttackSpell : BaseAbility
         float critroll = Random.Range(0f, 1f) + bonusCritRate + caster.character.CritRate;
         MagicShotProjectile newProjectile = Instantiate(projectile, caster.character.abilityPoints[0].position, caster.character.abilityPoints[0].rotation);
         yield return new WaitForSeconds(delayToEnd);
-        newProjectile.InitializeProjectile(caster, validTargets[0], caster.character.Attack * damageScaling, critroll, this);
+        newProjectile.InitializeProjectile(caster, validTargets[0], caster.character.Attack * damageScaling, critroll, DamageType.Magic, this);
         //validTargets[0].character.TakeDamage(caster.character.Attack * damageScaling * (critroll >= 1 ? 2 : 1), DamageType.Physical, out _);
         //if (critroll >= 1)
         //    caster.character.OnCrit();

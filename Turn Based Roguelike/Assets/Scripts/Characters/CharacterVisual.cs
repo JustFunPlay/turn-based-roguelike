@@ -29,6 +29,8 @@ public class CharacterVisual : MonoBehaviour
 
     private List<StatusEffect> effects = new List<StatusEffect>();
 
+    [SerializeField] private float lifetimeAfterDeath;
+
     public void InitializeCharacter(CharacterData characterData)
     {
         Level = 1;
@@ -244,7 +246,7 @@ public class CharacterVisual : MonoBehaviour
         if (CurrentHP <= 0)
         {
             PlayAnimation("Death");
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, lifetimeAfterDeath);
             return true;
         }
         return false;

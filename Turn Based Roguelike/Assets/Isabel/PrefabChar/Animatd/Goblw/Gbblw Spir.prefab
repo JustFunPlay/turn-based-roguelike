@@ -165,3 +165,4 @@ MonoBehaviour:
   centreOfMassOffset: 0.7
   animator: {fileID: 2055037702892903334}
   abilityPoints: []
+  lifetimeAfterDeath: 1.5
