@@ -1070,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1175,7 +1175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1355,7 +1355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1870,13 +1870,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355901699}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.83597785, y: -0.010658888, z: 0.10057517, w: -0.5393627}
-  m_LocalPosition: {x: -0.146, y: 0.228, z: 1.286}
+  m_LocalRotation: {x: 0.83754975, y: -0.0015939893, z: 0.08651337, w: -0.5394657}
+  m_LocalPosition: {x: -0.139, y: 0.273, z: 1.266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1883475171}
-  m_LocalEulerAnglesHint: {x: 244.112, y: -24.296997, z: 16.815994}
+  m_LocalEulerAnglesHint: {x: 244.606, y: -19.994995, z: 12.938004}
 --- !u!23 &355901701
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2057,6 +2057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: axe
       objectReference: {fileID: 0}
+    - target: {fileID: 1183282936275127975, guid: 3d49968e4bd3ab449b13bd6652b5fea6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1954576683189507101, guid: 3d49968e4bd3ab449b13bd6652b5fea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -2096,6 +2100,10 @@ PrefabInstance:
     - target: {fileID: 1954576683189507101, guid: 3d49968e4bd3ab449b13bd6652b5fea6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 100.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919041664609859198, guid: 3d49968e4bd3ab449b13bd6652b5fea6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2628,6 +2636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2659,7 +2671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3256,6 +3268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3514,7 +3530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3660,6 +3676,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
       propertyPath: m_Name
       value: Torch (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3832,43 +3852,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.146
+      value: -0.139
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.228
+      value: 0.273
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.286
+      value: 1.266
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5393627
+      value: -0.5394657
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.83597785
+      value: 0.83754975
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.010658888
+      value: -0.0015939893
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.10057517
+      value: 0.08651337
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 244.112
+      value: 244.606
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -24.296997
+      value: -19.994995
       objectReference: {fileID: 0}
     - target: {fileID: 3831863374321586021, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 16.815994
+      value: 12.938004
       objectReference: {fileID: 0}
     - target: {fileID: 4496373376250861023, guid: ca99ba6fd18f3704098887939c090840, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4891,6 +4911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4922,7 +4946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -5352,6 +5376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5424,6 +5452,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
       propertyPath: m_Name
       value: Torch (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5741,6 +5773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5969,6 +6005,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
       propertyPath: m_Name
       value: Torch (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e710e58fb6a5f7f4c85dd2fc3818ee9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7082,7 +7122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -7435,7 +7475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210499807509760215, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_Intensity
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3546843690820749804, guid: 1063800a2a508d543b1d25eaba144b9c, type: 3}
       propertyPath: m_LocalScale.x
