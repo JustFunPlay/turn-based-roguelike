@@ -10898,7 +10898,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4602714534254258704, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8804658247589805118}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
       insertIndex: -1
@@ -10907,6 +10910,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5364846821833553550}
   m_SourcePrefab: {fileID: 100100000, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+--- !u!4 &1568850852978385945 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4602714534254258704, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
+  m_PrefabInstance: {fileID: 3036989596225818121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2802615709548802904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 440f542790ad90640b26f55d3b921a74, type: 3}
@@ -10924,11 +10932,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: d4f042abd6b74aa4aa0620afe83abbbe, type: 2}
+  characterData: {fileID: 11400000, guid: 4410e6d2beee40a499937753e3e94b83, type: 2}
   centreOfMassOffset: 1
   animator: {fileID: 5364846821833553550}
   abilityPoints: []
-  lifetimeAfterDeath: 0
 --- !u!95 &5364846821833553550
 Animator:
   serializedVersion: 5
@@ -10950,3 +10957,77 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &7675828552108683846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1568850852978385945}
+    m_Modifications:
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00526
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016974693914956994, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+      propertyPath: m_Name
+      value: Holy sword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+--- !u!4 &8804658247589805118 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1204268013339053688, guid: e74d4549d99aa9243a8a9726b86116fb, type: 3}
+  m_PrefabInstance: {fileID: 7675828552108683846}
+  m_PrefabAsset: {fileID: 0}

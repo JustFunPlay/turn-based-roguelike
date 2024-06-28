@@ -20,7 +20,7 @@ MonoBehaviour:
   baseMagic: 20
   baseResource: 0
   baseResourceRegen: 0
-  baseSpeed: 100
+  baseSpeed: 500
   baseEvasion: 0
   healthPerLevel: 0
   armorPerLevel: 0
@@ -30,8 +30,8 @@ MonoBehaviour:
   resourcePerLevel: 0
   resourceRegenPerLevel: 0
   abilities:
-  - {fileID: 11400000, guid: 5d35f42c828d7174c90f77d4e042aa8a, type: 2}
-  - {fileID: 11400000, guid: b929daf5d4c51f945bcb9fe77b90d89c, type: 2}
-  - {fileID: 11400000, guid: 649f3319d1b1f5f42bc6d6606f371618, type: 2}
-  - {fileID: 11400000, guid: b6063f0e40ddcb449b138c56fa1521fc, type: 2}
-  - {fileID: 11400000, guid: 16873ef2cdb13ba4d93df275ee3308d3, type: 2}
+  - {fileID: 11400000, guid: ff7281c3ec4d0cd49a00751dee0aacf1, type: 2}
+  - {fileID: 11400000, guid: 366ac394036c70644aef5deac3fa117d, type: 2}
+  - {fileID: 11400000, guid: 26d9c7b10e6026644b109019fdaba87d, type: 2}
+  - {fileID: 11400000, guid: c51767c89e0abb048a70430a93193e01, type: 2}
+  - {fileID: 11400000, guid: b3902bcf6cc3c434480fe716311fe1f7, type: 2}

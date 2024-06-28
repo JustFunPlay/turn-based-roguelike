@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 644da5be68e9835468b3e758698c6bfc, type: 2}
+  characterData: {fileID: 11400000, guid: 4698b50c1f82926418ba7d1a840985b7, type: 2}
   centreOfMassOffset: 0.7
   animator: {fileID: 2055037702892903334}
   abilityPoints: []

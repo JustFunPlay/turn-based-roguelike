@@ -12251,12 +12251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 5655c4464d02b16448e8b4aada84336f, type: 2}
+  characterData: {fileID: 11400000, guid: e8f814df41d9af94ab7e63fd03690c4c, type: 2}
   centreOfMassOffset: 1
   animator: {fileID: 6372259777938199460}
   abilityPoints:
   - {fileID: 8405315008078665365}
-  lifetimeAfterDeath: 0
 --- !u!95 &6372259777938199460
 Animator:
   serializedVersion: 5

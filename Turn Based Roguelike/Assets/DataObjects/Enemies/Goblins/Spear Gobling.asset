@@ -30,4 +30,4 @@ MonoBehaviour:
   resourcePerLevel: 0
   resourceRegenPerLevel: 0
   abilities:
-  - {fileID: 11400000, guid: 76490ec4b8bad1540a1b7f0df028fe0e, type: 2}
+  - {fileID: 11400000, guid: 1850fd7fd43b07a498f088a59ac8653f, type: 2}
