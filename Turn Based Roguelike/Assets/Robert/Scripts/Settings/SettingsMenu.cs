@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public Slider musicSlider;
+    public Slider sFXSlider;
+
     public AudioMixer musicMixer;
     public AudioMixer sFXMixer;
 
@@ -17,6 +21,14 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void Start()
     {
+        float prefMusicVolume = PlayerPrefs.GetFloat("MusicPref");
+        musicSlider.value = prefMusicVolume;
+        musicMixer.SetFloat("Music", prefMusicVolume);
+
+        float prefSFXVolume = PlayerPrefs.GetFloat("SFXPref");
+        sFXSlider.value = prefSFXVolume;
+        sFXMixer.SetFloat("SFX", prefSFXVolume);
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -49,10 +61,12 @@ public class NewBehaviourScript : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         musicMixer.SetFloat("Music", volume);
+        PlayerPrefs.SetFloat("MusicPref", volume);
     }
     public void SetSFXVolume(float volume)
     {
         sFXMixer.SetFloat("SFX", volume);
+        PlayerPrefs.SetFloat("SFXPref", volume);
     }
     public void SetFullscreen(bool fullscreen)
     {
