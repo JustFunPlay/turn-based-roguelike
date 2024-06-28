@@ -105,13 +105,15 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator MoveToNewFocusPoint(Transform newPoint)
     {
-        float moveTime = currentFocusPoint == initalCamPosition ? 100 : 10;
-        for (int t = 0; t <= moveTime; t++)
+        float moveTime = currentFocusPoint == initalCamPosition ? 2 : 0.25f;
+        for (float t = 0; t < moveTime; t += Time.fixedDeltaTime)
         {
             cameraTransform.position = Vector3.Lerp(currentFocusPoint.position, newPoint.position, t / moveTime);
             cameraTransform.rotation = Quaternion.Slerp(currentFocusPoint.rotation, newPoint.rotation, t / moveTime);
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForFixedUpdate();
         }
+        cameraTransform.position = newPoint.position;
+        cameraTransform.rotation = newPoint.rotation;
         currentFocusPoint = newPoint;
     }
 
