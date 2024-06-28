@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Prayr
   m_EditorClassIdentifier: 
   abilityName: Prayer
-  resourceCost: 200
+  resourceCost: 75
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1.667
+  delayToEnd: 1.5
   targeting: 3
   animationName: Prayer
   physicalHealingScaling: 0

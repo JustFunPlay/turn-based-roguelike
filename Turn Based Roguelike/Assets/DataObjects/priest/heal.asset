@@ -15,8 +15,8 @@ MonoBehaviour:
   abilityName: Heal
   resourceCost: 30
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 0.833
+  delayToEnd: 1.5
   targeting: 1
   animationName: Heal
   physicalHealingScaling: 0

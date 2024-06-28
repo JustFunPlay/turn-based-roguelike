@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Magic missiles
   m_EditorClassIdentifier: 
   abilityName: Magic Missiles
-  resourceCost: 0
+  resourceCost: 50
   description: 
   delayToInitialEffect: 1.759259
   delayToEnd: 0.5

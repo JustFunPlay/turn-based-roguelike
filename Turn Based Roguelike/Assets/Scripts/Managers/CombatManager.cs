@@ -33,10 +33,13 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private GameObject victoryScreen;
     [SerializeField] private GameObject gameoverScreen;
 
+    
+
     public CharacterVisual currentlyActingCharacter { get; private set; }
     private void Start()
     {
         instance = this;
+        //GameManager.instance.PlayMusic(battleSound);
 
         for (int i = 0; i < playerParty.Length; i++)
         {
@@ -362,7 +365,7 @@ public class CombatManager : MonoBehaviour
         for (int i = 0; i < enemyTeam.Length; i++)
             enemyTeam[i].Turnprogress -= timeToReduce;
         CameraManager.Instance.SetFocusPosition(nextToAct);
-        if (playerParty.Contains(targetingSource) && combatButtons != null)
+        //if (playerParty.Contains(targetingSource))
             combatButtons.SetActive(true);
         currentlyActingCharacter = nextToAct.character;
         nextToAct.character.StartTurn();
@@ -410,19 +413,17 @@ public class CombatManager : MonoBehaviour
             return false;
 
         Debug.Log("Combat End");
-        if (playerIsAlive && victoryScreen != null)
-            victoryScreen.SetActive(true);
-        else if (gameoverScreen != null)
-            gameoverScreen.SetActive(true); ;
+        if (playerIsAlive)
+            GameManager.instance.GoToScene(victoryScene + 1);
+        else
+            GameManager.instance.GoToScene(1);
+            //victoryScreen.SetActive(true);
+            //gameoverScreen.SetActive(true); ;
         return true;
     }
 
     public void GoToNextScene(bool isVictory)
     {
-        if (isVictory)
-            GameManager.instance.GoToScene(victoryScene);
-        else
-            GameManager.instance.GoToScene(0);
     }
 }
 [Serializable]

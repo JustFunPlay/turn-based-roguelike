@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Rejuvinate
   m_EditorClassIdentifier: 
   abilityName: Rejuvinate
-  resourceCost: 0
+  resourceCost: 30
   description: 
-  delayToInitialEffect: 0.5
-  delayToEnd: 0.5
+  delayToInitialEffect: 1.042
+  delayToEnd: 1.5
   targeting: 1
   animationName: Rejuv
   regenModifier: 0.3

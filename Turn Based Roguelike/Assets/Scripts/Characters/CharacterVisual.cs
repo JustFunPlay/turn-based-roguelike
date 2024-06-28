@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using static Cinemachine.AxisState;
 
 public class CharacterVisual : MonoBehaviour
@@ -31,6 +32,8 @@ public class CharacterVisual : MonoBehaviour
 
     [SerializeField] private float lifetimeAfterDeath;
 
+    [SerializeField] private CharacterHP hpTracker;
+
     public void InitializeCharacter(CharacterData characterData)
     {
         Level = 1;
@@ -45,8 +48,10 @@ public class CharacterVisual : MonoBehaviour
         ManaRegen = characterData.baseResourceRegen + (Level - 1) * characterData.resourceRegenPerLevel;
         CritRate = characterData.baseCritChance;
         if (MaxMana == 0)
-            SkillPoints = 5;
+            SkillPoints = 10;
         Speed = characterData.baseSpeed;
+        if (hpTracker != null)
+            hpTracker.SetMainCharMaxSliders(MaxHP, MaxMana != 0 ? MaxMana : 10);
         StartCoroutine(DoAltIdle());
         CombatManager.instance.GetOwnCombatPosition(this).targetingBox.OnInitialize(MaxHP);
     }
@@ -63,6 +68,7 @@ public class CharacterVisual : MonoBehaviour
     public void StartTurn()
     {
         Debug.Log($"{gameObject.name} starts their turn");
+        AddResource(MaxMana != 0 ? ManaRegen : 1);
 
         for (int i = 0; i < effects.Count; i++)
         {
@@ -204,7 +210,17 @@ public class CharacterVisual : MonoBehaviour
     public void AddSkillPoints(int ammount = 1)
     {
         if (MaxMana == 0)
+        {
             SkillPoints = Mathf.Clamp(SkillPoints + ammount, 0, 10);
+            if (hpTracker != null)
+                hpTracker.LoseResource(SkillPoints);
+        }
+    }
+    public void AdjustMana(float value)
+    {
+        CurrentMana = Mathf.Clamp(CurrentMana + value, 0, MaxMana);
+        if (hpTracker != null)
+            hpTracker.LoseResource(CurrentMana);
     }
 
     public void PlayAnimation(string animationName)
@@ -217,12 +233,12 @@ public class CharacterVisual : MonoBehaviour
     {
             AddSkillPoints();
     }
-    public void AddResource(int value)
+    public void AddResource(float value)
     {
         if (MaxMana > 0)
-            CurrentMana = Mathf.Min(CurrentMana + value, MaxMana);
+            AdjustMana(value);
         else
-            AddSkillPoints(value);
+            AddSkillPoints((int)value);
     }
     public bool TakeDamage(float damageToDo, DamageType damageType, out float damageDealt, float resistIgnore = 0)
     {
@@ -240,6 +256,8 @@ public class CharacterVisual : MonoBehaviour
         damageDealt = damageToDo;
         Debug.Log($"{gameObject.name} took {damageDealt} {damageType} damage");
         CombatManager.instance.GetOwnCombatPosition(this).targetingBox.TakeDamage(CurrentHP, damageDealt);
+        if (hpTracker != null)
+            hpTracker.MainTakeDamage(CurrentHP);
         if (CurrentHP <= 0)
             return true;
         return false;
@@ -259,6 +277,8 @@ public class CharacterVisual : MonoBehaviour
         healingDone = Mathf.Min(healingToDo, MaxHP - CurrentHP);
         CurrentHP = Mathf.Clamp(CurrentHP + healingToDo, 0, MaxHP);
         CombatManager.instance.GetOwnCombatPosition(this).targetingBox.TakeDamage(CurrentHP, healingDone, true);
+        if (hpTracker != null)
+            hpTracker.MainTakeDamage(CurrentHP);
     }
     public void UseAbility(int abilityIndex)
     {
