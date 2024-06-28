@@ -8,6 +8,7 @@ public class CameraManager : MonoBehaviour
     public static CameraManager Instance;
 
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform initalCamPosition;
 
     [SerializeField] private Transform[] playerFocusPositions;
     [SerializeField] private Transform[] playerFrontViewPositions;
@@ -22,7 +23,7 @@ public class CameraManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        currentFocusPoint = playerTeamFocusPosition;
+        currentFocusPoint = initalCamPosition;
         cameraTransform.position = currentFocusPoint.position;
         cameraTransform.rotation = currentFocusPoint.rotation;
         inverseFilter.SetActive(false);
@@ -104,10 +105,11 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator MoveToNewFocusPoint(Transform newPoint)
     {
-        for (int t = 0; t <= 10; t++)
+        float moveTime = currentFocusPoint == initalCamPosition ? 100 : 10;
+        for (int t = 0; t <= moveTime; t++)
         {
-            cameraTransform.position = Vector3.Lerp(currentFocusPoint.position, newPoint.position, t * 0.1f);
-            cameraTransform.rotation = Quaternion.Slerp(currentFocusPoint.rotation, newPoint.rotation, t * 0.1f);
+            cameraTransform.position = Vector3.Lerp(currentFocusPoint.position, newPoint.position, t / moveTime);
+            cameraTransform.rotation = Quaternion.Slerp(currentFocusPoint.rotation, newPoint.rotation, t / moveTime);
             yield return new WaitForSeconds(0.025f);
         }
         currentFocusPoint = newPoint;

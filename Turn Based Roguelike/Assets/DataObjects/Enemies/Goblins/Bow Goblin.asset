@@ -20,7 +20,7 @@ MonoBehaviour:
   baseMagic: 10
   baseResource: 0
   baseResourceRegen: 0
-  baseSpeed: 100
+  baseSpeed: 105
   baseEvasion: 0
   healthPerLevel: 0
   armorPerLevel: 0

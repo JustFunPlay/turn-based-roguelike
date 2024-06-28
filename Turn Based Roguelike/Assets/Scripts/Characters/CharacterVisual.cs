@@ -80,7 +80,10 @@ public class CharacterVisual : MonoBehaviour
         }
         else
         {
-
+            for (int i = 1; i < characterData.abilities.Count; i++)
+            {
+                CombatManager.instance.abilityText[i-1].text = characterData.abilities[i].abilityName;
+            }
         }
     }
 

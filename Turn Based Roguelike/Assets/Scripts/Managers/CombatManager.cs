@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,13 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private InputAction confirmTarget;
     [SerializeField] private InputAction moveTargetLeft;
     [SerializeField] private InputAction moveTargetRight;
+
+    [SerializeField] private GameObject combatButtons;
+    public TMP_Text[] abilityText;
+    [SerializeField] private int victoryScene;
+
+    [SerializeField] private GameObject victoryScreen;
+    [SerializeField] private GameObject gameoverScreen;
 
     public CharacterVisual currentlyActingCharacter { get; private set; }
     private void Start()
@@ -52,7 +60,9 @@ public class CombatManager : MonoBehaviour
                 enemyTeam[i].Turnprogress = 10000 / enemyTeam[i].character.Speed;
             }
         }
-        Invoke("ReadyNextCharacter", 0.1f);
+        CameraManager.Instance.SetTeamView(playerParty[0]);
+        combatButtons.SetActive(false);
+        Invoke("ReadyNextCharacter", 3f);
     }
 
     private void MoveTargetLeft(InputAction.CallbackContext callbackContext)
@@ -256,7 +266,8 @@ public class CombatManager : MonoBehaviour
             currentSelectedTargets.Add(GetRandomTarget(targetingSource, currentTargetingType));
         }
         startAbilityAction.Invoke(targetingSource, currentSelectedTargets.ToArray());
-        //deactivate buttons
+        if(combatButtons != null)
+            combatButtons.SetActive(false);
         CancelTargetSelection();
     }
 
@@ -351,10 +362,8 @@ public class CombatManager : MonoBehaviour
         for (int i = 0; i < enemyTeam.Length; i++)
             enemyTeam[i].Turnprogress -= timeToReduce;
         CameraManager.Instance.SetFocusPosition(nextToAct);
-        if (playerParty.Contains(targetingSource))
-        {
-            //activate hud
-        }
+        if (playerParty.Contains(targetingSource) && combatButtons != null)
+            combatButtons.SetActive(true);
         currentlyActingCharacter = nextToAct.character;
         nextToAct.character.StartTurn();
     }
@@ -401,7 +410,19 @@ public class CombatManager : MonoBehaviour
             return false;
 
         Debug.Log("Combat End");
+        if (playerIsAlive && victoryScreen != null)
+            victoryScreen.SetActive(true);
+        else if (gameoverScreen != null)
+            gameoverScreen.SetActive(true); ;
         return true;
+    }
+
+    public void GoToNextScene(bool isVictory)
+    {
+        if (isVictory)
+            GameManager.instance.GoToScene(victoryScene);
+        else
+            GameManager.instance.GoToScene(0);
     }
 }
 [Serializable]
