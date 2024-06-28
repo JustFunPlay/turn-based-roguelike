@@ -256,7 +256,7 @@ public class CombatManager : MonoBehaviour
             currentSelectedTargets.Add(GetRandomTarget(targetingSource, currentTargetingType));
         }
         startAbilityAction.Invoke(targetingSource, currentSelectedTargets.ToArray());
-
+        //deactivate buttons
         CancelTargetSelection();
     }
 
@@ -351,7 +351,10 @@ public class CombatManager : MonoBehaviour
         for (int i = 0; i < enemyTeam.Length; i++)
             enemyTeam[i].Turnprogress -= timeToReduce;
         CameraManager.Instance.SetFocusPosition(nextToAct);
-
+        if (playerParty.Contains(targetingSource))
+        {
+            //activate hud
+        }
         currentlyActingCharacter = nextToAct.character;
         nextToAct.character.StartTurn();
     }
