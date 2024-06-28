@@ -8,6 +8,7 @@ public class InBook : MonoBehaviour
     public GameObject weaponsTab;
     public GameObject bestiaryTab;
     public GameObject goBackButton;
+    public GameObject description;
     public GameObject mainButtons;
     public GameObject catalog;
     public GameObject leftPage1Button;
@@ -23,6 +24,7 @@ public class InBook : MonoBehaviour
             rightPage3Button.SetActive(true);
             bestiaryTab.SetActive(true);
             goBackButton.SetActive(true);
+            description.SetActive(true);
             Debug.Log("book opened");
             animator.SetInteger("Book", 0);
         }
@@ -52,10 +54,10 @@ public class InBook : MonoBehaviour
         rightPage2Button.SetActive(false);
         rightPage3Button.SetActive(false);
         goBackButton.SetActive(false);
+        description.SetActive(false);
         bestiaryTab.SetActive(false);
         weaponsTab.SetActive(false);
         characterTab.SetActive(false);
-        goBackButton.SetActive(false);
         animator.SetInteger("Book", 4);
     }
     public void CloseAllUI()
@@ -65,10 +67,10 @@ public class InBook : MonoBehaviour
         rightPage2Button.SetActive(false);
         rightPage3Button.SetActive(false);
         goBackButton.SetActive(false);
+        description.SetActive(false);
         bestiaryTab.SetActive(false);
         weaponsTab.SetActive(false);
         characterTab.SetActive(false);
-        goBackButton.SetActive(false);
     }
     public void PageOneUI()
     {
@@ -76,6 +78,7 @@ public class InBook : MonoBehaviour
         rightPage3Button.SetActive(true);
         bestiaryTab.SetActive(true);
         goBackButton.SetActive(true);
+        description.SetActive(true);
     }
     public void PageTwoUI()
     {
@@ -83,6 +86,7 @@ public class InBook : MonoBehaviour
         rightPage3Button.SetActive(true);
         weaponsTab.SetActive(true);
         goBackButton.SetActive(true);
+        description.SetActive(true);
     }
     public void PageThreeUI()
     {
@@ -90,5 +94,6 @@ public class InBook : MonoBehaviour
         leftPage2Button.SetActive(true);
         characterTab.SetActive(true);
         goBackButton.SetActive(true);
+        description.SetActive(true);
     }
 }

@@ -1,20 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
-    public Animator animator;
-    public GameObject text;
-    public GameObject fadeInImage;
-    public void StartTextZoom()
+    public void StartMainMenu()
     {
-        text.SetActive(true);
-        animator.SetInteger("NextAnim", 1);
-    }
-    public void StartFadeIn()
-    {
-        fadeInImage.SetActive(true);
-        animator.SetInteger("NextAnim", 2);
+        SceneManager.LoadScene("Robert");
     }
 }

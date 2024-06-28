@@ -18,4 +18,8 @@ public class Buttonfunctions : MonoBehaviour
         bestScreen.SetActive(false);
         buttons.SetActive(true);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
