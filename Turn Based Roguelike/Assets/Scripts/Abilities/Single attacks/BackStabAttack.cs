@@ -11,9 +11,11 @@ public class BackStabAttack : BaseAbility
 
     [Header("Animation Support")]
     [SerializeField] private float distanceBehindTarget = 1f;
+    [SerializeField] private GameObject teleportParticle;
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
+        Instantiate(teleportParticle, caster.character.transform.position + caster.character.transform.up * caster.character.centreOfMassOffset, Quaternion.identity);
         caster.character.transform.position = validTargets[0].standingPosition.position - validTargets[0].standingPosition.forward * distanceBehindTarget;
         caster.character.transform.LookAt(validTargets[0].standingPosition, Vector3.up);
         yield return new WaitForSeconds(delayToInitialEffect);
@@ -27,6 +29,7 @@ public class BackStabAttack : BaseAbility
 
         yield return new WaitForSeconds(delayToEnd);
 
+        Instantiate(teleportParticle, caster.character.transform.position + caster.character.transform.up * caster.character.centreOfMassOffset, Quaternion.identity);
         caster.character.transform.position = caster.standingPosition.position;
         caster.character.transform.LookAt(caster.standingPosition.position + caster.standingPosition.forward, Vector3.up);
 

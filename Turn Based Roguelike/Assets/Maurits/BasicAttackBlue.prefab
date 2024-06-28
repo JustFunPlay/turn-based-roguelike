@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3832470018738187985}
   - component: {fileID: 5613531924398680250}
   - component: {fileID: 7613222431961656692}
+  - component: {fileID: 6100772558658574938}
   m_Layer: 0
   m_Name: BasicAttackBlue
   m_TagString: Untagged
@@ -41,7 +42,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868264033340173947}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: d12f3e46dfaee124099c431677634d4c, type: 3}
+  m_Asset: {fileID: 0}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 1
   m_StartSeed: 0
@@ -111,3 +112,17 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6100772558658574938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868264033340173947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423af1bd63d3d9d42b203bc9f0004144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0
+  timeBeforeEnd: 0

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4727bb2f71c152448bcdf7c8db63754, type: 3}
-  m_Name: Wizard basic attack
+  m_Name: skele staff basic attack
   m_EditorClassIdentifier: 
   abilityName: Basic Attack
   resourceCost: 0
   description: 
-  delayToInitialEffect: 0.71428573
-  delayToEnd: 0.5952381
+  delayToInitialEffect: 0.5
+  delayToEnd: 0.5
   targeting: 4
   animationName: BasicAttack
   damageScaling: 0.5
   bonusCritRate: 0
   damageType: 1
-  showTarget: 0
-  projectile: {fileID: -7211407882556908345, guid: 5eb406a8a0947a541807e6e836327209, type: 3}
-  abilityPointIndex: 5
+  showTarget: 1
+  projectile: {fileID: 6100772558658574938, guid: e054c4362cd171e418fa68f169c37307, type: 3}
+  abilityPointIndex: 0

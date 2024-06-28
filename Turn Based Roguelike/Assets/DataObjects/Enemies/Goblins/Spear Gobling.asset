@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e7d400f9183d6245a62aebccbd4a9b5, type: 3}
-  m_Name: Axe goblin
+  m_Name: Spear Gobling
   m_EditorClassIdentifier: 
-  baseHealth: 24
+  baseHealth: 20
   baseArmor: 10
   baseMagicResist: 10
-  baseAttack: 7
-  baseCritChance: 0.05
-  baseMagic: 0
+  baseAttack: 10
+  baseCritChance: 0.1
+  baseMagic: 10
   baseResource: 0
   baseResourceRegen: 0
-  baseSpeed: 90
+  baseSpeed: 95
   baseEvasion: 0
   healthPerLevel: 0
   armorPerLevel: 0
@@ -30,4 +30,4 @@ MonoBehaviour:
   resourcePerLevel: 0
   resourceRegenPerLevel: 0
   abilities:
-  - {fileID: 11400000, guid: bd60c09170c5d8e46a9888f9dfd969f7, type: 2}
+  - {fileID: 11400000, guid: 1850fd7fd43b07a498f088a59ac8653f, type: 2}

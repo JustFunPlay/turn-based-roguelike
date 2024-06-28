@@ -22,3 +22,4 @@ MonoBehaviour:
   damageScaling: 0.5
   bonusCritRate: 0.2
   distanceBehindTarget: 1
+  teleportParticle: {fileID: 8420407169909311648, guid: 05b40d0e5d809114386b91533e13b72b, type: 3}

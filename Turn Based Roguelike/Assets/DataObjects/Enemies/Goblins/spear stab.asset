@@ -9,19 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4727bb2f71c152448bcdf7c8db63754, type: 3}
-  m_Name: Wizard basic attack
+  m_Script: {fileID: 11500000, guid: d5016d76b2b7f864a8f0fca7778e2668, type: 3}
+  m_Name: spear stab
   m_EditorClassIdentifier: 
-  abilityName: Basic Attack
+  abilityName: basic attack
   resourceCost: 0
   description: 
-  delayToInitialEffect: 0.71428573
-  delayToEnd: 0.5952381
+  delayToInitialEffect: 1
+  delayToEnd: 1
   targeting: 4
   animationName: BasicAttack
   damageScaling: 0.5
   bonusCritRate: 0
-  damageType: 1
-  showTarget: 0
-  projectile: {fileID: -7211407882556908345, guid: 5eb406a8a0947a541807e6e836327209, type: 3}
-  abilityPointIndex: 5
+  delayToHit: 0.625
+  delayAfterHit: 0.5416667
+  distanceToTarget: 1

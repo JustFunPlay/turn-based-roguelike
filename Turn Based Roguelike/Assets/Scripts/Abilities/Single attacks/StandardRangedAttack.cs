@@ -11,6 +11,7 @@ public class StandardRangedAttack : BaseAbility
     [SerializeField] private DamageType damageType;
     [SerializeField] private bool showTarget;
     [SerializeField] private MagicShotProjectile projectile;
+    [SerializeField] private int abilityPointIndex;
 
     protected override IEnumerator TriggerAbilityEffects(CombatPositionData caster, CombatPositionData[] validTargets)
     {
@@ -19,7 +20,7 @@ public class StandardRangedAttack : BaseAbility
 
         float critroll = Random.Range(0f, 1f) + bonusCritRate + caster.character.CritRate;
 
-        MagicShotProjectile newProjectile = Instantiate(projectile, caster.character.abilityPoints[0].position, caster.character.abilityPoints[0].rotation);
+        MagicShotProjectile newProjectile = Instantiate(projectile, caster.character.abilityPoints[abilityPointIndex].position, caster.character.abilityPoints[abilityPointIndex].rotation);
         newProjectile.InitializeProjectile(caster, validTargets[0], caster.character.Attack * damageScaling, critroll, damageType, this);
     }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5590142656251397889}
   - component: {fileID: 5513300113064570975}
   - component: {fileID: 1712633639727678798}
+  - component: {fileID: -7211407882556908345}
   m_Layer: 0
   m_Name: BasicAttack
   m_TagString: Untagged
@@ -41,9 +42,9 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5379663730324393223}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 63135bf4d960a7944b2786e5c9aab946, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 5ccbe397410204a43b7d8de88e7fab5a, type: 3}
   m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1
@@ -111,3 +112,17 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-7211407882556908345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379663730324393223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423af1bd63d3d9d42b203bc9f0004144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1
+  timeBeforeEnd: 0
