@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48a8f4731257a448ad3842af7b00310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: a0124ad345e42d044abfc09399df95c5, type: 2}
+  characterData: {fileID: 11400000, guid: 510a7fa700dbd2442a98bfc2c79034a2, type: 2}
   centreOfMassOffset: 1
   animator: {fileID: 9184464764231937821}
   abilityPoints:

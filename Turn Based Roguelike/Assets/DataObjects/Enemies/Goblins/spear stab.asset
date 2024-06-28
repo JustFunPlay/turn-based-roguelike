@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5016d76b2b7f864a8f0fca7778e2668, type: 3}
+  m_Script: {fileID: 11500000, guid: fad64167ec6c2c64bb5ebe6c2490a2a7, type: 3}
   m_Name: spear stab
   m_EditorClassIdentifier: 
   abilityName: basic attack
   resourceCost: 0
   description: 
-  delayToInitialEffect: 1
-  delayToEnd: 1
+  delayToInitialEffect: 0.792
+  delayToEnd: 0.792
   targeting: 4
   animationName: BasicAttack
   damageScaling: 0.5

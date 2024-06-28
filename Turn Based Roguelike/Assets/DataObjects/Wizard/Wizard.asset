@@ -30,8 +30,8 @@ MonoBehaviour:
   resourcePerLevel: 0
   resourceRegenPerLevel: 0
   abilities:
-  - {fileID: 11400000, guid: 1f09af6bee060c043b3d448d69a4e638, type: 2}
-  - {fileID: 11400000, guid: 47fa551a308da3d4cb1c1cae7bd9ecfb, type: 2}
-  - {fileID: 11400000, guid: 7ff53509eaf8be74eb04a05e20ab21aa, type: 2}
-  - {fileID: 11400000, guid: b2488cf07aea30847a630e558b0879ba, type: 2}
-  - {fileID: 11400000, guid: 8dc09fb3a64e27d42930a514e89c2b1b, type: 2}
+  - {fileID: 11400000, guid: 444f9d0c90b109640803400379be8a66, type: 2}
+  - {fileID: 11400000, guid: 54fa517da1ec231449d3d225a5d0a83f, type: 2}
+  - {fileID: 11400000, guid: cf285e7781daa644dac2a1a805a00e0d, type: 2}
+  - {fileID: 11400000, guid: 934f6ac1c945fed4d999e550627ccc8a, type: 2}
+  - {fileID: 11400000, guid: 57f3b59bbca552644b14faaee94e479c, type: 2}
